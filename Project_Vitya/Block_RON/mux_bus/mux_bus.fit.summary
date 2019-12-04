@@ -1,0 +1,10 @@
+Fitter Status : Successful - Mon Oct 21 00:00:30 2019
+Quartus II Version : 8.1 Build 163 10/28/2008 SJ Web Edition
+Revision Name : mux_bus
+Top-level Entity Name : mux_bus
+Family : FLEX10K
+Device : EPF10K10TC144-3
+Timing Models : Final
+Total logic elements : 40 / 576 ( 7 % )
+Total pins : 75 / 102 ( 74 % )
+Total memory bits : 0 / 6,144 ( 0 % )

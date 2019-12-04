@@ -1,0 +1,9 @@
+|reg_flags
+c => cf~reg0.CLK
+c => zf~reg0.CLK
+cl => cf~reg0.DATAIN
+zl => zf~reg0.DATAIN
+cf <= cf~reg0.DB_MAX_OUTPUT_PORT_TYPE
+zf <= zf~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

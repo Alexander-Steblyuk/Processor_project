@@ -1,0 +1,66 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 12.500 ns
+From           : k[13]
+To             : lpm_counter:ak_rtl_0|alt_counter_f10ke:wysi_counter|q[7]
+From Clock     : --
+To Clock       : c
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 11.000 ns
+From           : lpm_counter:ak_rtl_0|alt_counter_f10ke:wysi_counter|q[2]
+To             : ak[2]
+From Clock     : c
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 13.200 ns
+From           : k[12]
+To             : jmp
+From Clock     : --
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 0.500 ns
+From           : k[0]
+To             : lpm_counter:ak_rtl_0|alt_counter_f10ke:wysi_counter|q[0]
+From Clock     : --
+To Clock       : c
+Failed Paths   : 0
+
+Type           : Clock Setup: 'c'
+Slack          : N/A
+Required Time  : None
+Actual Time    : Restricted to 125.00 MHz ( period = 8.000 ns )
+From           : lpm_counter:ak_rtl_0|alt_counter_f10ke:wysi_counter|q[0]
+To             : lpm_counter:ak_rtl_0|alt_counter_f10ke:wysi_counter|q[7]
+From Clock     : c
+To Clock       : c
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

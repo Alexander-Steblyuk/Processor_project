@@ -1,0 +1,42 @@
+|control
+c => ak[7]~reg0.CLK
+c => ak[6]~reg0.CLK
+c => ak[5]~reg0.CLK
+c => ak[4]~reg0.CLK
+c => ak[3]~reg0.CLK
+c => ak[2]~reg0.CLK
+c => ak[1]~reg0.CLK
+c => ak[0]~reg0.CLK
+k[0] => ak~7.DATAB
+k[1] => ak~6.DATAB
+k[2] => ak~5.DATAB
+k[3] => ak~4.DATAB
+k[4] => ak~3.DATAB
+k[5] => ak~2.DATAB
+k[6] => ak~1.DATAB
+k[7] => ak~0.DATAB
+k[8] => jmp~4.IN1
+k[8] => jmp~2.IN1
+k[8] => jmp~8.IN0
+k[9] => jmp~7.IN0
+k[9] => jmp~3.IN0
+k[10] => jmp~3.IN1
+k[10] => jmp~7.IN1
+k[11] => ~NO_FANOUT~
+k[12] => jmp~1.IN1
+k[13] => jmp~0.IN1
+k[14] => ~NO_FANOUT~
+k[15] => jmp~0.IN0
+cf => jmp~9.IN1
+zf => jmp~5.IN1
+jmp <= jmp~11.DB_MAX_OUTPUT_PORT_TYPE
+ak[0] <= ak[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ak[1] <= ak[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ak[2] <= ak[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ak[3] <= ak[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ak[4] <= ak[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ak[5] <= ak[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ak[6] <= ak[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ak[7] <= ak[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

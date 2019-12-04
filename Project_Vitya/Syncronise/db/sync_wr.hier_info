@@ -1,0 +1,30 @@
+|sync_wr
+c => w_m~0.IN1
+c => w_r~7.IN1
+k[0] => w_m~4.IN0
+k[0] => w_r~5.IN1
+k[1] => ~NO_FANOUT~
+k[2] => ~NO_FANOUT~
+k[3] => ~NO_FANOUT~
+k[4] => ~NO_FANOUT~
+k[5] => ~NO_FANOUT~
+k[6] => ~NO_FANOUT~
+k[7] => ~NO_FANOUT~
+k[8] => ~NO_FANOUT~
+k[9] => ~NO_FANOUT~
+k[10] => ~NO_FANOUT~
+k[11] => ~NO_FANOUT~
+k[12] => w_m~3.IN0
+k[12] => w_r~4.IN1
+k[13] => w_m~2.IN0
+k[13] => w_r~3.IN0
+k[13] => w_r~0.IN0
+k[14] => w_m~1.IN0
+k[14] => w_r~2.IN1
+k[15] => w_m~0.IN0
+k[15] => w_r~2.IN0
+k[15] => w_r~1.IN0
+w_r <= w_r~7.DB_MAX_OUTPUT_PORT_TYPE
+w_m <= w_m~4.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,862 @@
+Classic Timing Analyzer report for block_ron
+Mon Oct 21 00:03:02 2019
+Quartus II Version 8.1 Build 163 10/28/2008 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. tsu
+  6. tco
+  7. tpd
+  8. th
+  9. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2008 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                 ;
++------------------------------+-------+---------------+-------------+----------------------+----------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time ; From                 ; To                   ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+-------------+----------------------+----------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 1.700 ns    ; dx[5]                ; reg_8_bit:inst|q[5]  ; --         ; ax[0]    ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 28.100 ns   ; reg_8_bit:inst1|q[0] ; x[0]                 ; c          ; --       ; 0            ;
+; Worst-case tpd               ; N/A   ; None          ; 19.000 ns   ; ax[2]                ; x[3]                 ; --         ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; 7.400 ns    ; dx[5]                ; reg_8_bit:inst5|q[5] ; --         ; c        ; 0            ;
+; Total number of failed paths ;       ;               ;             ;                      ;                      ;            ;          ; 0            ;
++------------------------------+-------+---------------+-------------+----------------------+----------------------+------------+----------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                           ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                              ; Setting            ; From ; To ; Entity Name ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                         ; EPF10K10LC84-3     ;      ;    ;             ;
+; Timing Models                                                       ; Final              ;      ;    ;             ;
+; Default hold multicycle                                             ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                           ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                              ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                      ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                    ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                               ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                             ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                    ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                       ; Off                ;      ;    ;             ;
+; Number of source nodes to report per destination node               ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                               ; 10                 ;      ;    ;             ;
+; Number of paths to report                                           ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                        ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                              ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                          ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                        ; Off                ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis      ; Off                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                          ; Near End           ;      ;    ;             ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; c               ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
+; ax[0]           ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
+; ax[1]           ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
+; ax[2]           ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; tsu                                                                                                                                                  ;
++-----------------------------------------+-----------------------------------------------------+------------+-------+----------------------+----------+
+; Slack                                   ; Required tsu                                        ; Actual tsu ; From  ; To                   ; To Clock ;
++-----------------------------------------+-----------------------------------------------------+------------+-------+----------------------+----------+
+; N/A                                     ; None                                                ; 1.700 ns   ; dx[3] ; reg_8_bit:inst2|q[3] ; ax[0]    ;
+; N/A                                     ; None                                                ; 1.700 ns   ; dx[5] ; reg_8_bit:inst|q[5]  ; ax[0]    ;
+; N/A                                     ; None                                                ; 1.600 ns   ; dx[3] ; reg_8_bit:inst2|q[3] ; ax[1]    ;
+; N/A                                     ; None                                                ; 1.600 ns   ; dx[3] ; reg_8_bit:inst2|q[3] ; ax[2]    ;
+; N/A                                     ; None                                                ; 1.600 ns   ; dx[5] ; reg_8_bit:inst|q[5]  ; ax[1]    ;
+; N/A                                     ; None                                                ; 1.600 ns   ; dx[5] ; reg_8_bit:inst|q[5]  ; ax[2]    ;
+; N/A                                     ; None                                                ; 1.100 ns   ; dx[3] ; reg_8_bit:inst4|q[3] ; ax[0]    ;
+; N/A                                     ; None                                                ; 0.900 ns   ; dx[1] ; reg_8_bit:inst4|q[1] ; ax[0]    ;
+; N/A                                     ; None                                                ; 0.900 ns   ; dx[3] ; reg_8_bit:inst3|q[3] ; ax[0]    ;
+; N/A                                     ; None                                                ; 0.900 ns   ; dx[3] ; reg_8_bit:inst4|q[3] ; ax[1]    ;
+; N/A                                     ; None                                                ; 0.900 ns   ; dx[3] ; reg_8_bit:inst4|q[3] ; ax[2]    ;
+; N/A                                     ; None                                                ; 0.900 ns   ; dx[6] ; reg_8_bit:inst4|q[6] ; ax[0]    ;
+; N/A                                     ; None                                                ; 0.700 ns   ; dx[1] ; reg_8_bit:inst4|q[1] ; ax[1]    ;
+; N/A                                     ; None                                                ; 0.700 ns   ; dx[1] ; reg_8_bit:inst4|q[1] ; ax[2]    ;
+; N/A                                     ; None                                                ; 0.700 ns   ; dx[3] ; reg_8_bit:inst3|q[3] ; ax[1]    ;
+; N/A                                     ; None                                                ; 0.700 ns   ; dx[3] ; reg_8_bit:inst3|q[3] ; ax[2]    ;
+; N/A                                     ; None                                                ; 0.700 ns   ; dx[6] ; reg_8_bit:inst4|q[6] ; ax[1]    ;
+; N/A                                     ; None                                                ; 0.700 ns   ; dx[6] ; reg_8_bit:inst4|q[6] ; ax[2]    ;
+; N/A                                     ; None                                                ; 0.700 ns   ; dx[7] ; reg_8_bit:inst4|q[7] ; ax[0]    ;
+; N/A                                     ; None                                                ; 0.600 ns   ; dx[1] ; reg_8_bit:inst|q[1]  ; ax[0]    ;
+; N/A                                     ; None                                                ; 0.600 ns   ; dx[3] ; reg_8_bit:inst|q[3]  ; ax[0]    ;
+; N/A                                     ; None                                                ; 0.600 ns   ; dx[6] ; reg_8_bit:inst|q[6]  ; ax[0]    ;
+; N/A                                     ; None                                                ; 0.500 ns   ; dx[1] ; reg_8_bit:inst|q[1]  ; ax[1]    ;
+; N/A                                     ; None                                                ; 0.500 ns   ; dx[1] ; reg_8_bit:inst|q[1]  ; ax[2]    ;
+; N/A                                     ; None                                                ; 0.500 ns   ; dx[3] ; reg_8_bit:inst|q[3]  ; ax[1]    ;
+; N/A                                     ; None                                                ; 0.500 ns   ; dx[3] ; reg_8_bit:inst|q[3]  ; ax[2]    ;
+; N/A                                     ; None                                                ; 0.500 ns   ; dx[4] ; reg_8_bit:inst2|q[4] ; ax[0]    ;
+; N/A                                     ; None                                                ; 0.500 ns   ; dx[4] ; reg_8_bit:inst4|q[4] ; ax[0]    ;
+; N/A                                     ; None                                                ; 0.500 ns   ; dx[5] ; reg_8_bit:inst4|q[5] ; ax[0]    ;
+; N/A                                     ; None                                                ; 0.500 ns   ; dx[6] ; reg_8_bit:inst|q[6]  ; ax[1]    ;
+; N/A                                     ; None                                                ; 0.500 ns   ; dx[6] ; reg_8_bit:inst|q[6]  ; ax[2]    ;
+; N/A                                     ; None                                                ; 0.500 ns   ; dx[7] ; reg_8_bit:inst4|q[7] ; ax[1]    ;
+; N/A                                     ; None                                                ; 0.500 ns   ; dx[7] ; reg_8_bit:inst4|q[7] ; ax[2]    ;
+; N/A                                     ; None                                                ; 0.400 ns   ; dx[4] ; reg_8_bit:inst2|q[4] ; ax[1]    ;
+; N/A                                     ; None                                                ; 0.400 ns   ; dx[4] ; reg_8_bit:inst2|q[4] ; ax[2]    ;
+; N/A                                     ; None                                                ; 0.400 ns   ; dx[4] ; reg_8_bit:inst6|q[4] ; ax[0]    ;
+; N/A                                     ; None                                                ; 0.400 ns   ; dx[7] ; reg_8_bit:inst|q[7]  ; ax[0]    ;
+; N/A                                     ; None                                                ; 0.300 ns   ; dx[0] ; reg_8_bit:inst4|q[0] ; ax[0]    ;
+; N/A                                     ; None                                                ; 0.300 ns   ; dx[1] ; reg_8_bit:inst1|q[1] ; ax[0]    ;
+; N/A                                     ; None                                                ; 0.300 ns   ; dx[2] ; reg_8_bit:inst4|q[2] ; ax[0]    ;
+; N/A                                     ; None                                                ; 0.300 ns   ; dx[3] ; reg_8_bit:inst6|q[3] ; ax[0]    ;
+; N/A                                     ; None                                                ; 0.300 ns   ; dx[4] ; reg_8_bit:inst3|q[4] ; ax[0]    ;
+; N/A                                     ; None                                                ; 0.300 ns   ; dx[4] ; reg_8_bit:inst1|q[4] ; ax[0]    ;
+; N/A                                     ; None                                                ; 0.300 ns   ; dx[4] ; reg_8_bit:inst4|q[4] ; ax[1]    ;
+; N/A                                     ; None                                                ; 0.300 ns   ; dx[4] ; reg_8_bit:inst4|q[4] ; ax[2]    ;
+; N/A                                     ; None                                                ; 0.300 ns   ; dx[4] ; reg_8_bit:inst6|q[4] ; ax[1]    ;
+; N/A                                     ; None                                                ; 0.300 ns   ; dx[4] ; reg_8_bit:inst6|q[4] ; ax[2]    ;
+; N/A                                     ; None                                                ; 0.300 ns   ; dx[5] ; reg_8_bit:inst4|q[5] ; ax[1]    ;
+; N/A                                     ; None                                                ; 0.300 ns   ; dx[5] ; reg_8_bit:inst4|q[5] ; ax[2]    ;
+; N/A                                     ; None                                                ; 0.300 ns   ; dx[7] ; reg_8_bit:inst|q[7]  ; ax[1]    ;
+; N/A                                     ; None                                                ; 0.300 ns   ; dx[7] ; reg_8_bit:inst|q[7]  ; ax[2]    ;
+; N/A                                     ; None                                                ; 0.200 ns   ; dx[1] ; reg_8_bit:inst1|q[1] ; ax[1]    ;
+; N/A                                     ; None                                                ; 0.200 ns   ; dx[1] ; reg_8_bit:inst1|q[1] ; ax[2]    ;
+; N/A                                     ; None                                                ; 0.200 ns   ; dx[3] ; reg_8_bit:inst7|q[3] ; ax[0]    ;
+; N/A                                     ; None                                                ; 0.200 ns   ; dx[3] ; reg_8_bit:inst7|q[3] ; ax[1]    ;
+; N/A                                     ; None                                                ; 0.200 ns   ; dx[3] ; reg_8_bit:inst7|q[3] ; ax[2]    ;
+; N/A                                     ; None                                                ; 0.200 ns   ; dx[3] ; reg_8_bit:inst6|q[3] ; ax[1]    ;
+; N/A                                     ; None                                                ; 0.200 ns   ; dx[3] ; reg_8_bit:inst6|q[3] ; ax[2]    ;
+; N/A                                     ; None                                                ; 0.200 ns   ; dx[4] ; reg_8_bit:inst1|q[4] ; ax[1]    ;
+; N/A                                     ; None                                                ; 0.200 ns   ; dx[4] ; reg_8_bit:inst1|q[4] ; ax[2]    ;
+; N/A                                     ; None                                                ; 0.100 ns   ; dx[0] ; reg_8_bit:inst2|q[0] ; ax[0]    ;
+; N/A                                     ; None                                                ; 0.100 ns   ; dx[0] ; reg_8_bit:inst4|q[0] ; ax[1]    ;
+; N/A                                     ; None                                                ; 0.100 ns   ; dx[0] ; reg_8_bit:inst4|q[0] ; ax[2]    ;
+; N/A                                     ; None                                                ; 0.100 ns   ; dx[2] ; reg_8_bit:inst4|q[2] ; ax[1]    ;
+; N/A                                     ; None                                                ; 0.100 ns   ; dx[2] ; reg_8_bit:inst4|q[2] ; ax[2]    ;
+; N/A                                     ; None                                                ; 0.100 ns   ; dx[4] ; reg_8_bit:inst3|q[4] ; ax[1]    ;
+; N/A                                     ; None                                                ; 0.100 ns   ; dx[4] ; reg_8_bit:inst3|q[4] ; ax[2]    ;
+; N/A                                     ; None                                                ; 0.100 ns   ; dx[5] ; reg_8_bit:inst6|q[5] ; ax[0]    ;
+; N/A                                     ; None                                                ; 0.000 ns   ; dx[0] ; reg_8_bit:inst2|q[0] ; ax[1]    ;
+; N/A                                     ; None                                                ; 0.000 ns   ; dx[0] ; reg_8_bit:inst2|q[0] ; ax[2]    ;
+; N/A                                     ; None                                                ; 0.000 ns   ; dx[1] ; reg_8_bit:inst3|q[1] ; ax[0]    ;
+; N/A                                     ; None                                                ; 0.000 ns   ; dx[1] ; reg_8_bit:inst2|q[1] ; ax[0]    ;
+; N/A                                     ; None                                                ; 0.000 ns   ; dx[2] ; reg_8_bit:inst|q[2]  ; ax[0]    ;
+; N/A                                     ; None                                                ; 0.000 ns   ; dx[4] ; reg_8_bit:inst|q[4]  ; ax[0]    ;
+; N/A                                     ; None                                                ; 0.000 ns   ; dx[5] ; reg_8_bit:inst1|q[5] ; ax[0]    ;
+; N/A                                     ; None                                                ; 0.000 ns   ; dx[5] ; reg_8_bit:inst7|q[5] ; ax[0]    ;
+; N/A                                     ; None                                                ; 0.000 ns   ; dx[5] ; reg_8_bit:inst7|q[5] ; ax[1]    ;
+; N/A                                     ; None                                                ; 0.000 ns   ; dx[5] ; reg_8_bit:inst7|q[5] ; ax[2]    ;
+; N/A                                     ; None                                                ; 0.000 ns   ; dx[5] ; reg_8_bit:inst6|q[5] ; ax[1]    ;
+; N/A                                     ; None                                                ; 0.000 ns   ; dx[5] ; reg_8_bit:inst6|q[5] ; ax[2]    ;
+; N/A                                     ; None                                                ; -0.100 ns  ; dx[0] ; reg_8_bit:inst3|q[0] ; ax[0]    ;
+; N/A                                     ; None                                                ; -0.100 ns  ; dx[0] ; reg_8_bit:inst|q[0]  ; ax[0]    ;
+; N/A                                     ; None                                                ; -0.100 ns  ; dx[1] ; reg_8_bit:inst2|q[1] ; ax[1]    ;
+; N/A                                     ; None                                                ; -0.100 ns  ; dx[1] ; reg_8_bit:inst2|q[1] ; ax[2]    ;
+; N/A                                     ; None                                                ; -0.100 ns  ; dx[2] ; reg_8_bit:inst1|q[2] ; ax[0]    ;
+; N/A                                     ; None                                                ; -0.100 ns  ; dx[2] ; reg_8_bit:inst|q[2]  ; ax[1]    ;
+; N/A                                     ; None                                                ; -0.100 ns  ; dx[2] ; reg_8_bit:inst|q[2]  ; ax[2]    ;
+; N/A                                     ; None                                                ; -0.100 ns  ; dx[4] ; reg_8_bit:inst|q[4]  ; ax[1]    ;
+; N/A                                     ; None                                                ; -0.100 ns  ; dx[4] ; reg_8_bit:inst|q[4]  ; ax[2]    ;
+; N/A                                     ; None                                                ; -0.100 ns  ; dx[5] ; reg_8_bit:inst1|q[5] ; ax[1]    ;
+; N/A                                     ; None                                                ; -0.100 ns  ; dx[5] ; reg_8_bit:inst1|q[5] ; ax[2]    ;
+; N/A                                     ; None                                                ; -0.200 ns  ; dx[0] ; reg_8_bit:inst|q[0]  ; ax[1]    ;
+; N/A                                     ; None                                                ; -0.200 ns  ; dx[0] ; reg_8_bit:inst|q[0]  ; ax[2]    ;
+; N/A                                     ; None                                                ; -0.200 ns  ; dx[1] ; reg_8_bit:inst3|q[1] ; ax[1]    ;
+; N/A                                     ; None                                                ; -0.200 ns  ; dx[1] ; reg_8_bit:inst3|q[1] ; ax[2]    ;
+; N/A                                     ; None                                                ; -0.200 ns  ; dx[2] ; reg_8_bit:inst1|q[2] ; ax[1]    ;
+; N/A                                     ; None                                                ; -0.200 ns  ; dx[2] ; reg_8_bit:inst1|q[2] ; ax[2]    ;
+; N/A                                     ; None                                                ; -0.200 ns  ; dx[3] ; reg_8_bit:inst1|q[3] ; ax[0]    ;
+; N/A                                     ; None                                                ; -0.200 ns  ; dx[3] ; reg_8_bit:inst2|q[3] ; c        ;
+; N/A                                     ; None                                                ; -0.200 ns  ; dx[5] ; reg_8_bit:inst|q[5]  ; c        ;
+; N/A                                     ; None                                                ; -0.300 ns  ; dx[0] ; reg_8_bit:inst3|q[0] ; ax[1]    ;
+; N/A                                     ; None                                                ; -0.300 ns  ; dx[0] ; reg_8_bit:inst3|q[0] ; ax[2]    ;
+; N/A                                     ; None                                                ; -0.300 ns  ; dx[0] ; reg_8_bit:inst1|q[0] ; ax[0]    ;
+; N/A                                     ; None                                                ; -0.300 ns  ; dx[3] ; reg_8_bit:inst1|q[3] ; ax[1]    ;
+; N/A                                     ; None                                                ; -0.300 ns  ; dx[3] ; reg_8_bit:inst1|q[3] ; ax[2]    ;
+; N/A                                     ; None                                                ; -0.300 ns  ; dx[5] ; reg_8_bit:inst2|q[5] ; ax[0]    ;
+; N/A                                     ; None                                                ; -0.400 ns  ; dx[0] ; reg_8_bit:inst1|q[0] ; ax[1]    ;
+; N/A                                     ; None                                                ; -0.400 ns  ; dx[0] ; reg_8_bit:inst1|q[0] ; ax[2]    ;
+; N/A                                     ; None                                                ; -0.400 ns  ; dx[2] ; reg_8_bit:inst2|q[2] ; ax[0]    ;
+; N/A                                     ; None                                                ; -0.400 ns  ; dx[2] ; reg_8_bit:inst6|q[2] ; ax[0]    ;
+; N/A                                     ; None                                                ; -0.400 ns  ; dx[3] ; reg_8_bit:inst4|q[3] ; c        ;
+; N/A                                     ; None                                                ; -0.400 ns  ; dx[4] ; reg_8_bit:inst7|q[4] ; ax[0]    ;
+; N/A                                     ; None                                                ; -0.400 ns  ; dx[4] ; reg_8_bit:inst7|q[4] ; ax[1]    ;
+; N/A                                     ; None                                                ; -0.400 ns  ; dx[4] ; reg_8_bit:inst7|q[4] ; ax[2]    ;
+; N/A                                     ; None                                                ; -0.400 ns  ; dx[5] ; reg_8_bit:inst2|q[5] ; ax[1]    ;
+; N/A                                     ; None                                                ; -0.400 ns  ; dx[5] ; reg_8_bit:inst2|q[5] ; ax[2]    ;
+; N/A                                     ; None                                                ; -0.500 ns  ; dx[0] ; reg_8_bit:inst6|q[0] ; ax[0]    ;
+; N/A                                     ; None                                                ; -0.500 ns  ; dx[1] ; reg_8_bit:inst7|q[1] ; ax[0]    ;
+; N/A                                     ; None                                                ; -0.500 ns  ; dx[1] ; reg_8_bit:inst7|q[1] ; ax[1]    ;
+; N/A                                     ; None                                                ; -0.500 ns  ; dx[1] ; reg_8_bit:inst7|q[1] ; ax[2]    ;
+; N/A                                     ; None                                                ; -0.500 ns  ; dx[1] ; reg_8_bit:inst6|q[1] ; ax[0]    ;
+; N/A                                     ; None                                                ; -0.500 ns  ; dx[2] ; reg_8_bit:inst2|q[2] ; ax[1]    ;
+; N/A                                     ; None                                                ; -0.500 ns  ; dx[2] ; reg_8_bit:inst2|q[2] ; ax[2]    ;
+; N/A                                     ; None                                                ; -0.500 ns  ; dx[2] ; reg_8_bit:inst6|q[2] ; ax[1]    ;
+; N/A                                     ; None                                                ; -0.500 ns  ; dx[2] ; reg_8_bit:inst6|q[2] ; ax[2]    ;
+; N/A                                     ; None                                                ; -0.500 ns  ; dx[6] ; reg_8_bit:inst2|q[6] ; ax[0]    ;
+; N/A                                     ; None                                                ; -0.500 ns  ; dx[6] ; reg_8_bit:inst6|q[6] ; ax[0]    ;
+; N/A                                     ; None                                                ; -0.600 ns  ; dx[0] ; reg_8_bit:inst7|q[0] ; ax[0]    ;
+; N/A                                     ; None                                                ; -0.600 ns  ; dx[0] ; reg_8_bit:inst7|q[0] ; ax[1]    ;
+; N/A                                     ; None                                                ; -0.600 ns  ; dx[0] ; reg_8_bit:inst7|q[0] ; ax[2]    ;
+; N/A                                     ; None                                                ; -0.600 ns  ; dx[0] ; reg_8_bit:inst6|q[0] ; ax[1]    ;
+; N/A                                     ; None                                                ; -0.600 ns  ; dx[0] ; reg_8_bit:inst6|q[0] ; ax[2]    ;
+; N/A                                     ; None                                                ; -0.600 ns  ; dx[1] ; reg_8_bit:inst4|q[1] ; c        ;
+; N/A                                     ; None                                                ; -0.600 ns  ; dx[1] ; reg_8_bit:inst6|q[1] ; ax[1]    ;
+; N/A                                     ; None                                                ; -0.600 ns  ; dx[1] ; reg_8_bit:inst6|q[1] ; ax[2]    ;
+; N/A                                     ; None                                                ; -0.600 ns  ; dx[2] ; reg_8_bit:inst3|q[2] ; ax[0]    ;
+; N/A                                     ; None                                                ; -0.600 ns  ; dx[5] ; reg_8_bit:inst3|q[5] ; ax[0]    ;
+; N/A                                     ; None                                                ; -0.600 ns  ; dx[6] ; reg_8_bit:inst1|q[6] ; ax[0]    ;
+; N/A                                     ; None                                                ; -0.600 ns  ; dx[6] ; reg_8_bit:inst2|q[6] ; ax[1]    ;
+; N/A                                     ; None                                                ; -0.600 ns  ; dx[6] ; reg_8_bit:inst2|q[6] ; ax[2]    ;
+; N/A                                     ; None                                                ; -0.600 ns  ; dx[6] ; reg_8_bit:inst4|q[6] ; c        ;
+; N/A                                     ; None                                                ; -0.600 ns  ; dx[6] ; reg_8_bit:inst6|q[6] ; ax[1]    ;
+; N/A                                     ; None                                                ; -0.600 ns  ; dx[6] ; reg_8_bit:inst6|q[6] ; ax[2]    ;
+; N/A                                     ; None                                                ; -0.600 ns  ; dx[7] ; reg_8_bit:inst2|q[7] ; ax[0]    ;
+; N/A                                     ; None                                                ; -0.600 ns  ; dx[7] ; reg_8_bit:inst6|q[7] ; ax[0]    ;
+; N/A                                     ; None                                                ; -0.700 ns  ; dx[3] ; reg_8_bit:inst3|q[3] ; c        ;
+; N/A                                     ; None                                                ; -0.700 ns  ; dx[6] ; reg_8_bit:inst3|q[6] ; ax[0]    ;
+; N/A                                     ; None                                                ; -0.700 ns  ; dx[6] ; reg_8_bit:inst1|q[6] ; ax[1]    ;
+; N/A                                     ; None                                                ; -0.700 ns  ; dx[6] ; reg_8_bit:inst1|q[6] ; ax[2]    ;
+; N/A                                     ; None                                                ; -0.700 ns  ; dx[7] ; reg_8_bit:inst1|q[7] ; ax[0]    ;
+; N/A                                     ; None                                                ; -0.700 ns  ; dx[7] ; reg_8_bit:inst7|q[7] ; ax[0]    ;
+; N/A                                     ; None                                                ; -0.700 ns  ; dx[7] ; reg_8_bit:inst7|q[7] ; ax[1]    ;
+; N/A                                     ; None                                                ; -0.700 ns  ; dx[7] ; reg_8_bit:inst7|q[7] ; ax[2]    ;
+; N/A                                     ; None                                                ; -0.700 ns  ; dx[7] ; reg_8_bit:inst2|q[7] ; ax[1]    ;
+; N/A                                     ; None                                                ; -0.700 ns  ; dx[7] ; reg_8_bit:inst2|q[7] ; ax[2]    ;
+; N/A                                     ; None                                                ; -0.700 ns  ; dx[7] ; reg_8_bit:inst6|q[7] ; ax[1]    ;
+; N/A                                     ; None                                                ; -0.700 ns  ; dx[7] ; reg_8_bit:inst6|q[7] ; ax[2]    ;
+; N/A                                     ; None                                                ; -0.800 ns  ; dx[2] ; reg_8_bit:inst3|q[2] ; ax[1]    ;
+; N/A                                     ; None                                                ; -0.800 ns  ; dx[2] ; reg_8_bit:inst3|q[2] ; ax[2]    ;
+; N/A                                     ; None                                                ; -0.800 ns  ; dx[5] ; reg_8_bit:inst3|q[5] ; ax[1]    ;
+; N/A                                     ; None                                                ; -0.800 ns  ; dx[5] ; reg_8_bit:inst3|q[5] ; ax[2]    ;
+; N/A                                     ; None                                                ; -0.800 ns  ; dx[7] ; reg_8_bit:inst3|q[7] ; ax[0]    ;
+; N/A                                     ; None                                                ; -0.800 ns  ; dx[7] ; reg_8_bit:inst1|q[7] ; ax[1]    ;
+; N/A                                     ; None                                                ; -0.800 ns  ; dx[7] ; reg_8_bit:inst1|q[7] ; ax[2]    ;
+; N/A                                     ; None                                                ; -0.800 ns  ; dx[7] ; reg_8_bit:inst4|q[7] ; c        ;
+; N/A                                     ; None                                                ; -0.900 ns  ; dx[6] ; reg_8_bit:inst3|q[6] ; ax[1]    ;
+; N/A                                     ; None                                                ; -0.900 ns  ; dx[6] ; reg_8_bit:inst3|q[6] ; ax[2]    ;
+; N/A                                     ; None                                                ; -1.000 ns  ; dx[2] ; reg_8_bit:inst7|q[2] ; ax[0]    ;
+; N/A                                     ; None                                                ; -1.000 ns  ; dx[2] ; reg_8_bit:inst7|q[2] ; ax[1]    ;
+; N/A                                     ; None                                                ; -1.000 ns  ; dx[2] ; reg_8_bit:inst7|q[2] ; ax[2]    ;
+; N/A                                     ; None                                                ; -1.000 ns  ; dx[4] ; reg_8_bit:inst4|q[4] ; c        ;
+; N/A                                     ; None                                                ; -1.000 ns  ; dx[5] ; reg_8_bit:inst4|q[5] ; c        ;
+; N/A                                     ; None                                                ; -1.000 ns  ; dx[6] ; reg_8_bit:inst7|q[6] ; ax[0]    ;
+; N/A                                     ; None                                                ; -1.000 ns  ; dx[6] ; reg_8_bit:inst7|q[6] ; ax[1]    ;
+; N/A                                     ; None                                                ; -1.000 ns  ; dx[6] ; reg_8_bit:inst7|q[6] ; ax[2]    ;
+; N/A                                     ; None                                                ; -1.000 ns  ; dx[7] ; reg_8_bit:inst3|q[7] ; ax[1]    ;
+; N/A                                     ; None                                                ; -1.000 ns  ; dx[7] ; reg_8_bit:inst3|q[7] ; ax[2]    ;
+; N/A                                     ; None                                                ; -1.100 ns  ; dx[3] ; reg_8_bit:inst5|q[3] ; ax[0]    ;
+; N/A                                     ; None                                                ; -1.200 ns  ; dx[0] ; reg_8_bit:inst4|q[0] ; c        ;
+; N/A                                     ; None                                                ; -1.200 ns  ; dx[2] ; reg_8_bit:inst4|q[2] ; c        ;
+; N/A                                     ; None                                                ; -1.200 ns  ; dx[3] ; reg_8_bit:inst5|q[3] ; ax[1]    ;
+; N/A                                     ; None                                                ; -1.200 ns  ; dx[3] ; reg_8_bit:inst5|q[3] ; ax[2]    ;
+; N/A                                     ; None                                                ; -1.300 ns  ; dx[1] ; reg_8_bit:inst|q[1]  ; c        ;
+; N/A                                     ; None                                                ; -1.300 ns  ; dx[3] ; reg_8_bit:inst|q[3]  ; c        ;
+; N/A                                     ; None                                                ; -1.300 ns  ; dx[4] ; reg_8_bit:inst3|q[4] ; c        ;
+; N/A                                     ; None                                                ; -1.300 ns  ; dx[6] ; reg_8_bit:inst|q[6]  ; c        ;
+; N/A                                     ; None                                                ; -1.400 ns  ; dx[4] ; reg_8_bit:inst2|q[4] ; c        ;
+; N/A                                     ; None                                                ; -1.500 ns  ; dx[4] ; reg_8_bit:inst6|q[4] ; c        ;
+; N/A                                     ; None                                                ; -1.500 ns  ; dx[7] ; reg_8_bit:inst|q[7]  ; c        ;
+; N/A                                     ; None                                                ; -1.600 ns  ; dx[1] ; reg_8_bit:inst3|q[1] ; c        ;
+; N/A                                     ; None                                                ; -1.600 ns  ; dx[1] ; reg_8_bit:inst1|q[1] ; c        ;
+; N/A                                     ; None                                                ; -1.600 ns  ; dx[3] ; reg_8_bit:inst6|q[3] ; c        ;
+; N/A                                     ; None                                                ; -1.600 ns  ; dx[4] ; reg_8_bit:inst1|q[4] ; c        ;
+; N/A                                     ; None                                                ; -1.700 ns  ; dx[0] ; reg_8_bit:inst3|q[0] ; c        ;
+; N/A                                     ; None                                                ; -1.700 ns  ; dx[3] ; reg_8_bit:inst7|q[3] ; c        ;
+; N/A                                     ; None                                                ; -1.800 ns  ; dx[0] ; reg_8_bit:inst2|q[0] ; c        ;
+; N/A                                     ; None                                                ; -1.800 ns  ; dx[4] ; reg_8_bit:inst5|q[4] ; ax[0]    ;
+; N/A                                     ; None                                                ; -1.800 ns  ; dx[5] ; reg_8_bit:inst6|q[5] ; c        ;
+; N/A                                     ; None                                                ; -1.900 ns  ; dx[1] ; reg_8_bit:inst5|q[1] ; ax[0]    ;
+; N/A                                     ; None                                                ; -1.900 ns  ; dx[1] ; reg_8_bit:inst2|q[1] ; c        ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;            ;       ;                      ;          ;
++-----------------------------------------+-----------------------------------------------------+------------+-------+----------------------+----------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; tco                                                                                                                                                   ;
++-----------------------------------------+-----------------------------------------------------+------------+----------------------+------+------------+
+; Slack                                   ; Required tco                                        ; Actual tco ; From                 ; To   ; From Clock ;
++-----------------------------------------+-----------------------------------------------------+------------+----------------------+------+------------+
+; N/A                                     ; None                                                ; 28.100 ns  ; reg_8_bit:inst1|q[0] ; x[0] ; c          ;
+; N/A                                     ; None                                                ; 27.800 ns  ; reg_8_bit:inst3|q[6] ; y[6] ; c          ;
+; N/A                                     ; None                                                ; 27.600 ns  ; reg_8_bit:inst4|q[1] ; x[1] ; c          ;
+; N/A                                     ; None                                                ; 27.500 ns  ; reg_8_bit:inst|q[3]  ; x[3] ; c          ;
+; N/A                                     ; None                                                ; 27.300 ns  ; reg_8_bit:inst|q[6]  ; y[6] ; c          ;
+; N/A                                     ; None                                                ; 27.300 ns  ; reg_8_bit:inst3|q[0] ; x[0] ; c          ;
+; N/A                                     ; None                                                ; 27.200 ns  ; reg_8_bit:inst|q[1]  ; x[1] ; c          ;
+; N/A                                     ; None                                                ; 27.200 ns  ; reg_8_bit:inst3|q[3] ; x[3] ; c          ;
+; N/A                                     ; None                                                ; 27.200 ns  ; reg_8_bit:inst1|q[3] ; x[3] ; c          ;
+; N/A                                     ; None                                                ; 27.100 ns  ; reg_8_bit:inst1|q[6] ; y[6] ; c          ;
+; N/A                                     ; None                                                ; 27.100 ns  ; reg_8_bit:inst4|q[6] ; y[6] ; c          ;
+; N/A                                     ; None                                                ; 27.100 ns  ; reg_8_bit:inst1|q[7] ; y[7] ; c          ;
+; N/A                                     ; None                                                ; 27.100 ns  ; reg_8_bit:inst|q[0]  ; x[0] ; c          ;
+; N/A                                     ; None                                                ; 26.900 ns  ; reg_8_bit:inst1|q[5] ; y[5] ; c          ;
+; N/A                                     ; None                                                ; 26.900 ns  ; reg_8_bit:inst4|q[0] ; x[0] ; c          ;
+; N/A                                     ; None                                                ; 26.800 ns  ; reg_8_bit:inst5|q[3] ; x[3] ; c          ;
+; N/A                                     ; None                                                ; 26.700 ns  ; reg_8_bit:inst3|q[3] ; y[3] ; c          ;
+; N/A                                     ; None                                                ; 26.700 ns  ; reg_8_bit:inst1|q[3] ; y[3] ; c          ;
+; N/A                                     ; None                                                ; 26.700 ns  ; reg_8_bit:inst3|q[7] ; y[7] ; c          ;
+; N/A                                     ; None                                                ; 26.700 ns  ; reg_8_bit:inst|q[7]  ; y[7] ; c          ;
+; N/A                                     ; None                                                ; 26.600 ns  ; reg_8_bit:inst3|q[1] ; x[1] ; c          ;
+; N/A                                     ; None                                                ; 26.600 ns  ; reg_8_bit:inst1|q[1] ; x[1] ; c          ;
+; N/A                                     ; None                                                ; 26.500 ns  ; reg_8_bit:inst1|q[2] ; y[2] ; c          ;
+; N/A                                     ; None                                                ; 26.500 ns  ; reg_8_bit:inst4|q[7] ; y[7] ; c          ;
+; N/A                                     ; None                                                ; 26.500 ns  ; reg_8_bit:inst|q[2]  ; x[2] ; c          ;
+; N/A                                     ; None                                                ; 26.400 ns  ; reg_8_bit:inst3|q[6] ; y[6] ; ax[1]      ;
+; N/A                                     ; None                                                ; 26.400 ns  ; reg_8_bit:inst3|q[6] ; y[6] ; ax[2]      ;
+; N/A                                     ; None                                                ; 26.400 ns  ; reg_8_bit:inst|q[4]  ; x[4] ; c          ;
+; N/A                                     ; None                                                ; 26.300 ns  ; reg_8_bit:inst5|q[3] ; y[3] ; c          ;
+; N/A                                     ; None                                                ; 26.300 ns  ; reg_8_bit:inst1|q[0] ; x[0] ; ax[1]      ;
+; N/A                                     ; None                                                ; 26.300 ns  ; reg_8_bit:inst1|q[0] ; x[0] ; ax[2]      ;
+; N/A                                     ; None                                                ; 26.300 ns  ; reg_8_bit:inst4|q[1] ; x[1] ; ax[1]      ;
+; N/A                                     ; None                                                ; 26.300 ns  ; reg_8_bit:inst4|q[1] ; x[1] ; ax[2]      ;
+; N/A                                     ; None                                                ; 26.300 ns  ; reg_8_bit:inst4|q[2] ; x[2] ; c          ;
+; N/A                                     ; None                                                ; 26.200 ns  ; reg_8_bit:inst3|q[6] ; y[6] ; ax[0]      ;
+; N/A                                     ; None                                                ; 26.200 ns  ; reg_8_bit:inst1|q[0] ; x[0] ; ax[0]      ;
+; N/A                                     ; None                                                ; 26.100 ns  ; reg_8_bit:inst1|q[0] ; y[0] ; c          ;
+; N/A                                     ; None                                                ; 26.100 ns  ; reg_8_bit:inst4|q[1] ; x[1] ; ax[0]      ;
+; N/A                                     ; None                                                ; 26.100 ns  ; reg_8_bit:inst4|q[4] ; x[4] ; c          ;
+; N/A                                     ; None                                                ; 26.000 ns  ; reg_8_bit:inst|q[4]  ; y[4] ; c          ;
+; N/A                                     ; None                                                ; 25.900 ns  ; reg_8_bit:inst|q[3]  ; y[3] ; c          ;
+; N/A                                     ; None                                                ; 25.900 ns  ; reg_8_bit:inst3|q[0] ; x[0] ; ax[1]      ;
+; N/A                                     ; None                                                ; 25.900 ns  ; reg_8_bit:inst3|q[0] ; x[0] ; ax[2]      ;
+; N/A                                     ; None                                                ; 25.800 ns  ; reg_8_bit:inst|q[0]  ; y[0] ; c          ;
+; N/A                                     ; None                                                ; 25.800 ns  ; reg_8_bit:inst4|q[6] ; y[6] ; ax[1]      ;
+; N/A                                     ; None                                                ; 25.800 ns  ; reg_8_bit:inst4|q[6] ; y[6] ; ax[2]      ;
+; N/A                                     ; None                                                ; 25.800 ns  ; reg_8_bit:inst3|q[3] ; x[3] ; ax[1]      ;
+; N/A                                     ; None                                                ; 25.800 ns  ; reg_8_bit:inst3|q[3] ; x[3] ; ax[2]      ;
+; N/A                                     ; None                                                ; 25.700 ns  ; reg_8_bit:inst4|q[3] ; y[3] ; c          ;
+; N/A                                     ; None                                                ; 25.700 ns  ; reg_8_bit:inst4|q[4] ; y[4] ; c          ;
+; N/A                                     ; None                                                ; 25.700 ns  ; reg_8_bit:inst|q[5]  ; y[5] ; c          ;
+; N/A                                     ; None                                                ; 25.700 ns  ; reg_8_bit:inst3|q[0] ; x[0] ; ax[0]      ;
+; N/A                                     ; None                                                ; 25.700 ns  ; reg_8_bit:inst|q[3]  ; x[3] ; ax[1]      ;
+; N/A                                     ; None                                                ; 25.700 ns  ; reg_8_bit:inst|q[3]  ; x[3] ; ax[2]      ;
+; N/A                                     ; None                                                ; 25.600 ns  ; reg_8_bit:inst4|q[0] ; y[0] ; c          ;
+; N/A                                     ; None                                                ; 25.600 ns  ; reg_8_bit:inst4|q[1] ; y[1] ; c          ;
+; N/A                                     ; None                                                ; 25.600 ns  ; reg_8_bit:inst4|q[6] ; y[6] ; ax[0]      ;
+; N/A                                     ; None                                                ; 25.600 ns  ; reg_8_bit:inst4|q[0] ; x[0] ; ax[1]      ;
+; N/A                                     ; None                                                ; 25.600 ns  ; reg_8_bit:inst4|q[0] ; x[0] ; ax[2]      ;
+; N/A                                     ; None                                                ; 25.600 ns  ; reg_8_bit:inst3|q[3] ; x[3] ; ax[0]      ;
+; N/A                                     ; None                                                ; 25.600 ns  ; reg_8_bit:inst|q[3]  ; x[3] ; ax[0]      ;
+; N/A                                     ; None                                                ; 25.500 ns  ; reg_8_bit:inst4|q[5] ; y[5] ; c          ;
+; N/A                                     ; None                                                ; 25.500 ns  ; reg_8_bit:inst6|q[5] ; y[5] ; c          ;
+; N/A                                     ; None                                                ; 25.500 ns  ; reg_8_bit:inst|q[6]  ; y[6] ; ax[1]      ;
+; N/A                                     ; None                                                ; 25.500 ns  ; reg_8_bit:inst|q[6]  ; y[6] ; ax[2]      ;
+; N/A                                     ; None                                                ; 25.500 ns  ; reg_8_bit:inst7|q[3] ; x[3] ; c          ;
+; N/A                                     ; None                                                ; 25.500 ns  ; reg_8_bit:inst4|q[3] ; x[3] ; c          ;
+; N/A                                     ; None                                                ; 25.400 ns  ; reg_8_bit:inst|q[6]  ; y[6] ; ax[0]      ;
+; N/A                                     ; None                                                ; 25.400 ns  ; reg_8_bit:inst4|q[0] ; x[0] ; ax[0]      ;
+; N/A                                     ; None                                                ; 25.400 ns  ; reg_8_bit:inst|q[1]  ; x[1] ; ax[1]      ;
+; N/A                                     ; None                                                ; 25.400 ns  ; reg_8_bit:inst|q[1]  ; x[1] ; ax[2]      ;
+; N/A                                     ; None                                                ; 25.400 ns  ; reg_8_bit:inst1|q[3] ; x[3] ; ax[1]      ;
+; N/A                                     ; None                                                ; 25.400 ns  ; reg_8_bit:inst1|q[3] ; x[3] ; ax[2]      ;
+; N/A                                     ; None                                                ; 25.400 ns  ; reg_8_bit:inst1|q[5] ; x[5] ; c          ;
+; N/A                                     ; None                                                ; 25.300 ns  ; reg_8_bit:inst3|q[0] ; y[0] ; c          ;
+; N/A                                     ; None                                                ; 25.300 ns  ; reg_8_bit:inst|q[2]  ; y[2] ; c          ;
+; N/A                                     ; None                                                ; 25.300 ns  ; reg_8_bit:inst3|q[3] ; y[3] ; ax[1]      ;
+; N/A                                     ; None                                                ; 25.300 ns  ; reg_8_bit:inst3|q[3] ; y[3] ; ax[2]      ;
+; N/A                                     ; None                                                ; 25.300 ns  ; reg_8_bit:inst1|q[6] ; y[6] ; ax[1]      ;
+; N/A                                     ; None                                                ; 25.300 ns  ; reg_8_bit:inst1|q[6] ; y[6] ; ax[2]      ;
+; N/A                                     ; None                                                ; 25.300 ns  ; reg_8_bit:inst3|q[7] ; y[7] ; ax[1]      ;
+; N/A                                     ; None                                                ; 25.300 ns  ; reg_8_bit:inst3|q[7] ; y[7] ; ax[2]      ;
+; N/A                                     ; None                                                ; 25.300 ns  ; reg_8_bit:inst1|q[7] ; y[7] ; ax[1]      ;
+; N/A                                     ; None                                                ; 25.300 ns  ; reg_8_bit:inst1|q[7] ; y[7] ; ax[2]      ;
+; N/A                                     ; None                                                ; 25.300 ns  ; reg_8_bit:inst|q[0]  ; x[0] ; ax[1]      ;
+; N/A                                     ; None                                                ; 25.300 ns  ; reg_8_bit:inst|q[0]  ; x[0] ; ax[2]      ;
+; N/A                                     ; None                                                ; 25.300 ns  ; reg_8_bit:inst|q[1]  ; x[1] ; ax[0]      ;
+; N/A                                     ; None                                                ; 25.300 ns  ; reg_8_bit:inst1|q[3] ; x[3] ; ax[0]      ;
+; N/A                                     ; None                                                ; 25.300 ns  ; reg_8_bit:inst3|q[4] ; x[4] ; c          ;
+; N/A                                     ; None                                                ; 25.300 ns  ; reg_8_bit:inst3|q[6] ; x[6] ; c          ;
+; N/A                                     ; None                                                ; 25.200 ns  ; reg_8_bit:inst3|q[1] ; y[1] ; c          ;
+; N/A                                     ; None                                                ; 25.200 ns  ; reg_8_bit:inst1|q[1] ; y[1] ; c          ;
+; N/A                                     ; None                                                ; 25.200 ns  ; reg_8_bit:inst|q[1]  ; y[1] ; c          ;
+; N/A                                     ; None                                                ; 25.200 ns  ; reg_8_bit:inst1|q[6] ; y[6] ; ax[0]      ;
+; N/A                                     ; None                                                ; 25.200 ns  ; reg_8_bit:inst1|q[7] ; y[7] ; ax[0]      ;
+; N/A                                     ; None                                                ; 25.200 ns  ; reg_8_bit:inst4|q[7] ; y[7] ; ax[1]      ;
+; N/A                                     ; None                                                ; 25.200 ns  ; reg_8_bit:inst4|q[7] ; y[7] ; ax[2]      ;
+; N/A                                     ; None                                                ; 25.200 ns  ; reg_8_bit:inst|q[0]  ; x[0] ; ax[0]      ;
+; N/A                                     ; None                                                ; 25.200 ns  ; reg_8_bit:inst3|q[1] ; x[1] ; ax[1]      ;
+; N/A                                     ; None                                                ; 25.200 ns  ; reg_8_bit:inst3|q[1] ; x[1] ; ax[2]      ;
+; N/A                                     ; None                                                ; 25.200 ns  ; reg_8_bit:inst2|q[1] ; x[1] ; c          ;
+; N/A                                     ; None                                                ; 25.200 ns  ; reg_8_bit:inst6|q[1] ; x[1] ; c          ;
+; N/A                                     ; None                                                ; 25.200 ns  ; reg_8_bit:inst1|q[2] ; x[2] ; c          ;
+; N/A                                     ; None                                                ; 25.200 ns  ; reg_8_bit:inst1|q[7] ; x[7] ; c          ;
+; N/A                                     ; None                                                ; 25.100 ns  ; reg_8_bit:inst3|q[2] ; y[2] ; c          ;
+; N/A                                     ; None                                                ; 25.100 ns  ; reg_8_bit:inst4|q[2] ; y[2] ; c          ;
+; N/A                                     ; None                                                ; 25.100 ns  ; reg_8_bit:inst3|q[3] ; y[3] ; ax[0]      ;
+; N/A                                     ; None                                                ; 25.100 ns  ; reg_8_bit:inst1|q[5] ; y[5] ; ax[1]      ;
+; N/A                                     ; None                                                ; 25.100 ns  ; reg_8_bit:inst1|q[5] ; y[5] ; ax[2]      ;
+; N/A                                     ; None                                                ; 25.100 ns  ; reg_8_bit:inst3|q[7] ; y[7] ; ax[0]      ;
+; N/A                                     ; None                                                ; 25.100 ns  ; reg_8_bit:inst1|q[4] ; x[4] ; c          ;
+; N/A                                     ; None                                                ; 25.100 ns  ; reg_8_bit:inst5|q[6] ; x[6] ; c          ;
+; N/A                                     ; None                                                ; 25.000 ns  ; reg_8_bit:inst5|q[0] ; y[0] ; c          ;
+; N/A                                     ; None                                                ; 25.000 ns  ; reg_8_bit:inst5|q[1] ; y[1] ; c          ;
+; N/A                                     ; None                                                ; 25.000 ns  ; reg_8_bit:inst5|q[2] ; y[2] ; c          ;
+; N/A                                     ; None                                                ; 25.000 ns  ; reg_8_bit:inst7|q[3] ; y[3] ; c          ;
+; N/A                                     ; None                                                ; 25.000 ns  ; reg_8_bit:inst1|q[5] ; y[5] ; ax[0]      ;
+; N/A                                     ; None                                                ; 25.000 ns  ; reg_8_bit:inst4|q[7] ; y[7] ; ax[0]      ;
+; N/A                                     ; None                                                ; 25.000 ns  ; reg_8_bit:inst3|q[1] ; x[1] ; ax[0]      ;
+; N/A                                     ; None                                                ; 25.000 ns  ; reg_8_bit:inst4|q[2] ; x[2] ; ax[1]      ;
+; N/A                                     ; None                                                ; 25.000 ns  ; reg_8_bit:inst4|q[2] ; x[2] ; ax[2]      ;
+; N/A                                     ; None                                                ; 25.000 ns  ; reg_8_bit:inst5|q[3] ; x[3] ; ax[1]      ;
+; N/A                                     ; None                                                ; 25.000 ns  ; reg_8_bit:inst5|q[3] ; x[3] ; ax[2]      ;
+; N/A                                     ; None                                                ; 24.900 ns  ; reg_8_bit:inst1|q[3] ; y[3] ; ax[1]      ;
+; N/A                                     ; None                                                ; 24.900 ns  ; reg_8_bit:inst1|q[3] ; y[3] ; ax[2]      ;
+; N/A                                     ; None                                                ; 24.900 ns  ; reg_8_bit:inst3|q[4] ; y[4] ; c          ;
+; N/A                                     ; None                                                ; 24.900 ns  ; reg_8_bit:inst2|q[5] ; y[5] ; c          ;
+; N/A                                     ; None                                                ; 24.900 ns  ; reg_8_bit:inst2|q[6] ; y[6] ; c          ;
+; N/A                                     ; None                                                ; 24.900 ns  ; reg_8_bit:inst|q[7]  ; y[7] ; ax[1]      ;
+; N/A                                     ; None                                                ; 24.900 ns  ; reg_8_bit:inst|q[7]  ; y[7] ; ax[2]      ;
+; N/A                                     ; None                                                ; 24.900 ns  ; reg_8_bit:inst5|q[3] ; x[3] ; ax[0]      ;
+; N/A                                     ; None                                                ; 24.800 ns  ; reg_8_bit:inst1|q[3] ; y[3] ; ax[0]      ;
+; N/A                                     ; None                                                ; 24.800 ns  ; reg_8_bit:inst5|q[5] ; y[5] ; c          ;
+; N/A                                     ; None                                                ; 24.800 ns  ; reg_8_bit:inst3|q[5] ; y[5] ; c          ;
+; N/A                                     ; None                                                ; 24.800 ns  ; reg_8_bit:inst|q[7]  ; y[7] ; ax[0]      ;
+; N/A                                     ; None                                                ; 24.800 ns  ; reg_8_bit:inst1|q[1] ; x[1] ; ax[1]      ;
+; N/A                                     ; None                                                ; 24.800 ns  ; reg_8_bit:inst1|q[1] ; x[1] ; ax[2]      ;
+; N/A                                     ; None                                                ; 24.800 ns  ; reg_8_bit:inst4|q[2] ; x[2] ; ax[0]      ;
+; N/A                                     ; None                                                ; 24.800 ns  ; reg_8_bit:inst4|q[4] ; x[4] ; ax[1]      ;
+; N/A                                     ; None                                                ; 24.800 ns  ; reg_8_bit:inst4|q[4] ; x[4] ; ax[2]      ;
+; N/A                                     ; None                                                ; 24.800 ns  ; reg_8_bit:inst|q[6]  ; x[6] ; c          ;
+; N/A                                     ; None                                                ; 24.800 ns  ; reg_8_bit:inst3|q[7] ; x[7] ; c          ;
+; N/A                                     ; None                                                ; 24.800 ns  ; reg_8_bit:inst|q[7]  ; x[7] ; c          ;
+; N/A                                     ; None                                                ; 24.700 ns  ; reg_8_bit:inst1|q[2] ; y[2] ; ax[1]      ;
+; N/A                                     ; None                                                ; 24.700 ns  ; reg_8_bit:inst1|q[2] ; y[2] ; ax[2]      ;
+; N/A                                     ; None                                                ; 24.700 ns  ; reg_8_bit:inst1|q[4] ; y[4] ; c          ;
+; N/A                                     ; None                                                ; 24.700 ns  ; reg_8_bit:inst2|q[0] ; x[0] ; c          ;
+; N/A                                     ; None                                                ; 24.700 ns  ; reg_8_bit:inst1|q[1] ; x[1] ; ax[0]      ;
+; N/A                                     ; None                                                ; 24.700 ns  ; reg_8_bit:inst|q[2]  ; x[2] ; ax[1]      ;
+; N/A                                     ; None                                                ; 24.700 ns  ; reg_8_bit:inst|q[2]  ; x[2] ; ax[2]      ;
+; N/A                                     ; None                                                ; 24.600 ns  ; reg_8_bit:inst1|q[2] ; y[2] ; ax[0]      ;
+; N/A                                     ; None                                                ; 24.600 ns  ; reg_8_bit:inst|q[2]  ; x[2] ; ax[0]      ;
+; N/A                                     ; None                                                ; 24.600 ns  ; reg_8_bit:inst4|q[4] ; x[4] ; ax[0]      ;
+; N/A                                     ; None                                                ; 24.600 ns  ; reg_8_bit:inst|q[4]  ; x[4] ; ax[1]      ;
+; N/A                                     ; None                                                ; 24.600 ns  ; reg_8_bit:inst|q[4]  ; x[4] ; ax[2]      ;
+; N/A                                     ; None                                                ; 24.600 ns  ; reg_8_bit:inst1|q[6] ; x[6] ; c          ;
+; N/A                                     ; None                                                ; 24.600 ns  ; reg_8_bit:inst4|q[6] ; x[6] ; c          ;
+; N/A                                     ; None                                                ; 24.600 ns  ; reg_8_bit:inst5|q[7] ; x[7] ; c          ;
+; N/A                                     ; None                                                ; 24.600 ns  ; reg_8_bit:inst4|q[7] ; x[7] ; c          ;
+; N/A                                     ; None                                                ; 24.500 ns  ; reg_8_bit:inst5|q[3] ; y[3] ; ax[1]      ;
+; N/A                                     ; None                                                ; 24.500 ns  ; reg_8_bit:inst5|q[3] ; y[3] ; ax[2]      ;
+; N/A                                     ; None                                                ; 24.500 ns  ; reg_8_bit:inst5|q[6] ; y[6] ; c          ;
+; N/A                                     ; None                                                ; 24.500 ns  ; reg_8_bit:inst6|q[6] ; y[6] ; c          ;
+; N/A                                     ; None                                                ; 24.500 ns  ; reg_8_bit:inst|q[4]  ; x[4] ; ax[0]      ;
+; N/A                                     ; None                                                ; 24.400 ns  ; reg_8_bit:inst5|q[3] ; y[3] ; ax[0]      ;
+; N/A                                     ; None                                                ; 24.400 ns  ; reg_8_bit:inst4|q[3] ; y[3] ; ax[1]      ;
+; N/A                                     ; None                                                ; 24.400 ns  ; reg_8_bit:inst4|q[3] ; y[3] ; ax[2]      ;
+; N/A                                     ; None                                                ; 24.400 ns  ; reg_8_bit:inst4|q[4] ; y[4] ; ax[1]      ;
+; N/A                                     ; None                                                ; 24.400 ns  ; reg_8_bit:inst4|q[4] ; y[4] ; ax[2]      ;
+; N/A                                     ; None                                                ; 24.300 ns  ; reg_8_bit:inst1|q[0] ; y[0] ; ax[1]      ;
+; N/A                                     ; None                                                ; 24.300 ns  ; reg_8_bit:inst1|q[0] ; y[0] ; ax[2]      ;
+; N/A                                     ; None                                                ; 24.300 ns  ; reg_8_bit:inst4|q[0] ; y[0] ; ax[1]      ;
+; N/A                                     ; None                                                ; 24.300 ns  ; reg_8_bit:inst4|q[0] ; y[0] ; ax[2]      ;
+; N/A                                     ; None                                                ; 24.300 ns  ; reg_8_bit:inst4|q[1] ; y[1] ; ax[1]      ;
+; N/A                                     ; None                                                ; 24.300 ns  ; reg_8_bit:inst4|q[1] ; y[1] ; ax[2]      ;
+; N/A                                     ; None                                                ; 24.300 ns  ; reg_8_bit:inst2|q[7] ; y[7] ; c          ;
+; N/A                                     ; None                                                ; 24.200 ns  ; reg_8_bit:inst1|q[0] ; y[0] ; ax[0]      ;
+; N/A                                     ; None                                                ; 24.200 ns  ; reg_8_bit:inst4|q[3] ; y[3] ; ax[0]      ;
+; N/A                                     ; None                                                ; 24.200 ns  ; reg_8_bit:inst4|q[4] ; y[4] ; ax[0]      ;
+; N/A                                     ; None                                                ; 24.200 ns  ; reg_8_bit:inst|q[4]  ; y[4] ; ax[1]      ;
+; N/A                                     ; None                                                ; 24.200 ns  ; reg_8_bit:inst|q[4]  ; y[4] ; ax[2]      ;
+; N/A                                     ; None                                                ; 24.200 ns  ; reg_8_bit:inst4|q[5] ; y[5] ; ax[1]      ;
+; N/A                                     ; None                                                ; 24.200 ns  ; reg_8_bit:inst4|q[5] ; y[5] ; ax[2]      ;
+; N/A                                     ; None                                                ; 24.200 ns  ; reg_8_bit:inst4|q[3] ; x[3] ; ax[1]      ;
+; N/A                                     ; None                                                ; 24.200 ns  ; reg_8_bit:inst4|q[3] ; x[3] ; ax[2]      ;
+; N/A                                     ; None                                                ; 24.200 ns  ; reg_8_bit:inst|q[5]  ; x[5] ; c          ;
+; N/A                                     ; None                                                ; 24.100 ns  ; reg_8_bit:inst4|q[0] ; y[0] ; ax[0]      ;
+; N/A                                     ; None                                                ; 24.100 ns  ; reg_8_bit:inst4|q[1] ; y[1] ; ax[0]      ;
+; N/A                                     ; None                                                ; 24.100 ns  ; reg_8_bit:inst|q[3]  ; y[3] ; ax[1]      ;
+; N/A                                     ; None                                                ; 24.100 ns  ; reg_8_bit:inst|q[3]  ; y[3] ; ax[2]      ;
+; N/A                                     ; None                                                ; 24.100 ns  ; reg_8_bit:inst|q[4]  ; y[4] ; ax[0]      ;
+; N/A                                     ; None                                                ; 24.100 ns  ; reg_8_bit:inst7|q[6] ; y[6] ; c          ;
+; N/A                                     ; None                                                ; 24.100 ns  ; reg_8_bit:inst6|q[0] ; x[0] ; c          ;
+; N/A                                     ; None                                                ; 24.100 ns  ; reg_8_bit:inst2|q[4] ; x[4] ; c          ;
+; N/A                                     ; None                                                ; 24.000 ns  ; reg_8_bit:inst|q[0]  ; y[0] ; ax[1]      ;
+; N/A                                     ; None                                                ; 24.000 ns  ; reg_8_bit:inst|q[0]  ; y[0] ; ax[2]      ;
+; N/A                                     ; None                                                ; 24.000 ns  ; reg_8_bit:inst7|q[2] ; y[2] ; c          ;
+; N/A                                     ; None                                                ; 24.000 ns  ; reg_8_bit:inst|q[3]  ; y[3] ; ax[0]      ;
+; N/A                                     ; None                                                ; 24.000 ns  ; reg_8_bit:inst4|q[5] ; y[5] ; ax[0]      ;
+; N/A                                     ; None                                                ; 24.000 ns  ; reg_8_bit:inst4|q[3] ; x[3] ; ax[0]      ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;            ;                      ;      ;            ;
++-----------------------------------------+-----------------------------------------------------+------------+----------------------+------+------------+
+
+
++------------------------------------------------------------+
+; tpd                                                        ;
++-------+-------------------+-----------------+-------+------+
+; Slack ; Required P2P Time ; Actual P2P Time ; From  ; To   ;
++-------+-------------------+-----------------+-------+------+
+; N/A   ; None              ; 19.000 ns       ; ax[1] ; x[3] ;
+; N/A   ; None              ; 19.000 ns       ; ax[2] ; x[3] ;
+; N/A   ; None              ; 18.100 ns       ; ay[2] ; y[5] ;
+; N/A   ; None              ; 18.100 ns       ; ay[1] ; y[5] ;
+; N/A   ; None              ; 18.000 ns       ; ay[2] ; y[6] ;
+; N/A   ; None              ; 17.900 ns       ; ay[1] ; y[6] ;
+; N/A   ; None              ; 17.800 ns       ; ax[2] ; x[0] ;
+; N/A   ; None              ; 17.800 ns       ; ax[2] ; x[1] ;
+; N/A   ; None              ; 17.700 ns       ; ax[1] ; x[0] ;
+; N/A   ; None              ; 17.700 ns       ; ax[1] ; x[1] ;
+; N/A   ; None              ; 17.600 ns       ; ay[2] ; y[3] ;
+; N/A   ; None              ; 17.500 ns       ; ax[1] ; x[5] ;
+; N/A   ; None              ; 17.500 ns       ; ax[2] ; x[5] ;
+; N/A   ; None              ; 17.400 ns       ; ay[1] ; y[3] ;
+; N/A   ; None              ; 17.300 ns       ; ay[2] ; y[7] ;
+; N/A   ; None              ; 17.200 ns       ; ay[1] ; y[7] ;
+; N/A   ; None              ; 17.200 ns       ; ax[1] ; x[4] ;
+; N/A   ; None              ; 17.200 ns       ; ax[2] ; x[4] ;
+; N/A   ; None              ; 17.000 ns       ; ay[2] ; y[4] ;
+; N/A   ; None              ; 17.000 ns       ; ax[1] ; x[2] ;
+; N/A   ; None              ; 17.000 ns       ; ax[2] ; x[2] ;
+; N/A   ; None              ; 16.900 ns       ; ay[2] ; y[2] ;
+; N/A   ; None              ; 16.900 ns       ; ay[1] ; y[2] ;
+; N/A   ; None              ; 16.800 ns       ; ay[1] ; y[4] ;
+; N/A   ; None              ; 15.600 ns       ; ay[2] ; y[0] ;
+; N/A   ; None              ; 15.600 ns       ; ay[1] ; y[0] ;
+; N/A   ; None              ; 15.500 ns       ; ay[2] ; y[1] ;
+; N/A   ; None              ; 15.500 ns       ; ay[1] ; y[1] ;
+; N/A   ; None              ; 15.400 ns       ; ax[1] ; x[6] ;
+; N/A   ; None              ; 15.400 ns       ; ax[2] ; x[6] ;
+; N/A   ; None              ; 15.300 ns       ; ax[1] ; x[7] ;
+; N/A   ; None              ; 15.300 ns       ; ax[2] ; x[7] ;
+; N/A   ; None              ; 14.200 ns       ; ay[0] ; y[6] ;
+; N/A   ; None              ; 13.600 ns       ; ay[0] ; y[5] ;
+; N/A   ; None              ; 13.500 ns       ; ay[0] ; y[7] ;
+; N/A   ; None              ; 13.000 ns       ; ay[0] ; y[4] ;
+; N/A   ; None              ; 12.700 ns       ; ay[0] ; y[0] ;
+; N/A   ; None              ; 12.700 ns       ; ay[0] ; y[1] ;
+; N/A   ; None              ; 12.700 ns       ; ay[0] ; y[3] ;
+; N/A   ; None              ; 12.300 ns       ; ay[0] ; y[2] ;
+; N/A   ; None              ; 10.800 ns       ; ax[0] ; x[3] ;
+; N/A   ; None              ; 10.300 ns       ; ax[0] ; x[4] ;
+; N/A   ; None              ; 10.200 ns       ; ax[0] ; x[0] ;
+; N/A   ; None              ; 10.200 ns       ; ax[0] ; x[1] ;
+; N/A   ; None              ; 10.000 ns       ; ax[0] ; x[2] ;
+; N/A   ; None              ; 10.000 ns       ; ax[0] ; x[5] ;
+; N/A   ; None              ; 9.800 ns        ; ax[0] ; x[6] ;
+; N/A   ; None              ; 9.700 ns        ; ax[0] ; x[7] ;
++-------+-------------------+-----------------+-------+------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; th                                                                                                                                                  ;
++-----------------------------------------+-----------------------------------------------------+-----------+-------+----------------------+----------+
+; Minimum Slack                           ; Required th                                         ; Actual th ; From  ; To                   ; To Clock ;
++-----------------------------------------+-----------------------------------------------------+-----------+-------+----------------------+----------+
+; N/A                                     ; None                                                ; 7.400 ns  ; dx[5] ; reg_8_bit:inst5|q[5] ; c        ;
+; N/A                                     ; None                                                ; 7.300 ns  ; dx[2] ; reg_8_bit:inst5|q[2] ; c        ;
+; N/A                                     ; None                                                ; 6.800 ns  ; dx[7] ; reg_8_bit:inst5|q[7] ; c        ;
+; N/A                                     ; None                                                ; 6.600 ns  ; dx[0] ; reg_8_bit:inst5|q[0] ; c        ;
+; N/A                                     ; None                                                ; 6.600 ns  ; dx[6] ; reg_8_bit:inst5|q[6] ; c        ;
+; N/A                                     ; None                                                ; 6.500 ns  ; dx[1] ; reg_8_bit:inst5|q[1] ; c        ;
+; N/A                                     ; None                                                ; 6.400 ns  ; dx[4] ; reg_8_bit:inst5|q[4] ; c        ;
+; N/A                                     ; None                                                ; 5.700 ns  ; dx[3] ; reg_8_bit:inst5|q[3] ; c        ;
+; N/A                                     ; None                                                ; 5.600 ns  ; dx[2] ; reg_8_bit:inst7|q[2] ; c        ;
+; N/A                                     ; None                                                ; 5.600 ns  ; dx[5] ; reg_8_bit:inst5|q[5] ; ax[1]    ;
+; N/A                                     ; None                                                ; 5.600 ns  ; dx[5] ; reg_8_bit:inst5|q[5] ; ax[2]    ;
+; N/A                                     ; None                                                ; 5.600 ns  ; dx[6] ; reg_8_bit:inst7|q[6] ; c        ;
+; N/A                                     ; None                                                ; 5.500 ns  ; dx[2] ; reg_8_bit:inst5|q[2] ; ax[1]    ;
+; N/A                                     ; None                                                ; 5.500 ns  ; dx[2] ; reg_8_bit:inst5|q[2] ; ax[2]    ;
+; N/A                                     ; None                                                ; 5.500 ns  ; dx[5] ; reg_8_bit:inst5|q[5] ; ax[0]    ;
+; N/A                                     ; None                                                ; 5.400 ns  ; dx[2] ; reg_8_bit:inst5|q[2] ; ax[0]    ;
+; N/A                                     ; None                                                ; 5.300 ns  ; dx[7] ; reg_8_bit:inst1|q[7] ; c        ;
+; N/A                                     ; None                                                ; 5.300 ns  ; dx[7] ; reg_8_bit:inst7|q[7] ; c        ;
+; N/A                                     ; None                                                ; 5.200 ns  ; dx[0] ; reg_8_bit:inst7|q[0] ; c        ;
+; N/A                                     ; None                                                ; 5.200 ns  ; dx[6] ; reg_8_bit:inst1|q[6] ; c        ;
+; N/A                                     ; None                                                ; 5.200 ns  ; dx[7] ; reg_8_bit:inst2|q[7] ; c        ;
+; N/A                                     ; None                                                ; 5.200 ns  ; dx[7] ; reg_8_bit:inst6|q[7] ; c        ;
+; N/A                                     ; None                                                ; 5.100 ns  ; dx[0] ; reg_8_bit:inst6|q[0] ; c        ;
+; N/A                                     ; None                                                ; 5.100 ns  ; dx[1] ; reg_8_bit:inst7|q[1] ; c        ;
+; N/A                                     ; None                                                ; 5.100 ns  ; dx[1] ; reg_8_bit:inst6|q[1] ; c        ;
+; N/A                                     ; None                                                ; 5.100 ns  ; dx[6] ; reg_8_bit:inst2|q[6] ; c        ;
+; N/A                                     ; None                                                ; 5.100 ns  ; dx[6] ; reg_8_bit:inst6|q[6] ; c        ;
+; N/A                                     ; None                                                ; 5.100 ns  ; dx[7] ; reg_8_bit:inst3|q[7] ; c        ;
+; N/A                                     ; None                                                ; 5.000 ns  ; dx[2] ; reg_8_bit:inst2|q[2] ; c        ;
+; N/A                                     ; None                                                ; 5.000 ns  ; dx[2] ; reg_8_bit:inst6|q[2] ; c        ;
+; N/A                                     ; None                                                ; 5.000 ns  ; dx[4] ; reg_8_bit:inst7|q[4] ; c        ;
+; N/A                                     ; None                                                ; 5.000 ns  ; dx[6] ; reg_8_bit:inst3|q[6] ; c        ;
+; N/A                                     ; None                                                ; 5.000 ns  ; dx[7] ; reg_8_bit:inst5|q[7] ; ax[1]    ;
+; N/A                                     ; None                                                ; 5.000 ns  ; dx[7] ; reg_8_bit:inst5|q[7] ; ax[2]    ;
+; N/A                                     ; None                                                ; 4.900 ns  ; dx[0] ; reg_8_bit:inst1|q[0] ; c        ;
+; N/A                                     ; None                                                ; 4.900 ns  ; dx[2] ; reg_8_bit:inst3|q[2] ; c        ;
+; N/A                                     ; None                                                ; 4.900 ns  ; dx[5] ; reg_8_bit:inst3|q[5] ; c        ;
+; N/A                                     ; None                                                ; 4.900 ns  ; dx[5] ; reg_8_bit:inst2|q[5] ; c        ;
+; N/A                                     ; None                                                ; 4.900 ns  ; dx[7] ; reg_8_bit:inst5|q[7] ; ax[0]    ;
+; N/A                                     ; None                                                ; 4.800 ns  ; dx[0] ; reg_8_bit:inst5|q[0] ; ax[1]    ;
+; N/A                                     ; None                                                ; 4.800 ns  ; dx[0] ; reg_8_bit:inst5|q[0] ; ax[2]    ;
+; N/A                                     ; None                                                ; 4.800 ns  ; dx[3] ; reg_8_bit:inst1|q[3] ; c        ;
+; N/A                                     ; None                                                ; 4.800 ns  ; dx[6] ; reg_8_bit:inst5|q[6] ; ax[1]    ;
+; N/A                                     ; None                                                ; 4.800 ns  ; dx[6] ; reg_8_bit:inst5|q[6] ; ax[2]    ;
+; N/A                                     ; None                                                ; 4.700 ns  ; dx[0] ; reg_8_bit:inst5|q[0] ; ax[0]    ;
+; N/A                                     ; None                                                ; 4.700 ns  ; dx[0] ; reg_8_bit:inst|q[0]  ; c        ;
+; N/A                                     ; None                                                ; 4.700 ns  ; dx[1] ; reg_8_bit:inst5|q[1] ; ax[1]    ;
+; N/A                                     ; None                                                ; 4.700 ns  ; dx[1] ; reg_8_bit:inst5|q[1] ; ax[2]    ;
+; N/A                                     ; None                                                ; 4.700 ns  ; dx[2] ; reg_8_bit:inst1|q[2] ; c        ;
+; N/A                                     ; None                                                ; 4.700 ns  ; dx[6] ; reg_8_bit:inst5|q[6] ; ax[0]    ;
+; N/A                                     ; None                                                ; 4.600 ns  ; dx[1] ; reg_8_bit:inst5|q[1] ; ax[0]    ;
+; N/A                                     ; None                                                ; 4.600 ns  ; dx[1] ; reg_8_bit:inst2|q[1] ; c        ;
+; N/A                                     ; None                                                ; 4.600 ns  ; dx[2] ; reg_8_bit:inst|q[2]  ; c        ;
+; N/A                                     ; None                                                ; 4.600 ns  ; dx[4] ; reg_8_bit:inst5|q[4] ; ax[1]    ;
+; N/A                                     ; None                                                ; 4.600 ns  ; dx[4] ; reg_8_bit:inst5|q[4] ; ax[2]    ;
+; N/A                                     ; None                                                ; 4.600 ns  ; dx[4] ; reg_8_bit:inst|q[4]  ; c        ;
+; N/A                                     ; None                                                ; 4.600 ns  ; dx[5] ; reg_8_bit:inst1|q[5] ; c        ;
+; N/A                                     ; None                                                ; 4.600 ns  ; dx[5] ; reg_8_bit:inst7|q[5] ; c        ;
+; N/A                                     ; None                                                ; 4.500 ns  ; dx[0] ; reg_8_bit:inst2|q[0] ; c        ;
+; N/A                                     ; None                                                ; 4.500 ns  ; dx[4] ; reg_8_bit:inst5|q[4] ; ax[0]    ;
+; N/A                                     ; None                                                ; 4.500 ns  ; dx[5] ; reg_8_bit:inst6|q[5] ; c        ;
+; N/A                                     ; None                                                ; 4.400 ns  ; dx[0] ; reg_8_bit:inst3|q[0] ; c        ;
+; N/A                                     ; None                                                ; 4.400 ns  ; dx[3] ; reg_8_bit:inst7|q[3] ; c        ;
+; N/A                                     ; None                                                ; 4.300 ns  ; dx[1] ; reg_8_bit:inst3|q[1] ; c        ;
+; N/A                                     ; None                                                ; 4.300 ns  ; dx[1] ; reg_8_bit:inst1|q[1] ; c        ;
+; N/A                                     ; None                                                ; 4.300 ns  ; dx[3] ; reg_8_bit:inst6|q[3] ; c        ;
+; N/A                                     ; None                                                ; 4.300 ns  ; dx[4] ; reg_8_bit:inst1|q[4] ; c        ;
+; N/A                                     ; None                                                ; 4.200 ns  ; dx[4] ; reg_8_bit:inst6|q[4] ; c        ;
+; N/A                                     ; None                                                ; 4.200 ns  ; dx[7] ; reg_8_bit:inst|q[7]  ; c        ;
+; N/A                                     ; None                                                ; 4.100 ns  ; dx[4] ; reg_8_bit:inst2|q[4] ; c        ;
+; N/A                                     ; None                                                ; 4.000 ns  ; dx[1] ; reg_8_bit:inst|q[1]  ; c        ;
+; N/A                                     ; None                                                ; 4.000 ns  ; dx[3] ; reg_8_bit:inst|q[3]  ; c        ;
+; N/A                                     ; None                                                ; 4.000 ns  ; dx[4] ; reg_8_bit:inst3|q[4] ; c        ;
+; N/A                                     ; None                                                ; 4.000 ns  ; dx[6] ; reg_8_bit:inst|q[6]  ; c        ;
+; N/A                                     ; None                                                ; 3.900 ns  ; dx[0] ; reg_8_bit:inst4|q[0] ; c        ;
+; N/A                                     ; None                                                ; 3.900 ns  ; dx[2] ; reg_8_bit:inst4|q[2] ; c        ;
+; N/A                                     ; None                                                ; 3.900 ns  ; dx[3] ; reg_8_bit:inst5|q[3] ; ax[1]    ;
+; N/A                                     ; None                                                ; 3.900 ns  ; dx[3] ; reg_8_bit:inst5|q[3] ; ax[2]    ;
+; N/A                                     ; None                                                ; 3.800 ns  ; dx[3] ; reg_8_bit:inst5|q[3] ; ax[0]    ;
+; N/A                                     ; None                                                ; 3.700 ns  ; dx[2] ; reg_8_bit:inst7|q[2] ; ax[0]    ;
+; N/A                                     ; None                                                ; 3.700 ns  ; dx[2] ; reg_8_bit:inst7|q[2] ; ax[1]    ;
+; N/A                                     ; None                                                ; 3.700 ns  ; dx[2] ; reg_8_bit:inst7|q[2] ; ax[2]    ;
+; N/A                                     ; None                                                ; 3.700 ns  ; dx[4] ; reg_8_bit:inst4|q[4] ; c        ;
+; N/A                                     ; None                                                ; 3.700 ns  ; dx[5] ; reg_8_bit:inst4|q[5] ; c        ;
+; N/A                                     ; None                                                ; 3.700 ns  ; dx[6] ; reg_8_bit:inst7|q[6] ; ax[0]    ;
+; N/A                                     ; None                                                ; 3.700 ns  ; dx[6] ; reg_8_bit:inst7|q[6] ; ax[1]    ;
+; N/A                                     ; None                                                ; 3.700 ns  ; dx[6] ; reg_8_bit:inst7|q[6] ; ax[2]    ;
+; N/A                                     ; None                                                ; 3.700 ns  ; dx[7] ; reg_8_bit:inst3|q[7] ; ax[1]    ;
+; N/A                                     ; None                                                ; 3.700 ns  ; dx[7] ; reg_8_bit:inst3|q[7] ; ax[2]    ;
+; N/A                                     ; None                                                ; 3.600 ns  ; dx[6] ; reg_8_bit:inst3|q[6] ; ax[1]    ;
+; N/A                                     ; None                                                ; 3.600 ns  ; dx[6] ; reg_8_bit:inst3|q[6] ; ax[2]    ;
+; N/A                                     ; None                                                ; 3.500 ns  ; dx[2] ; reg_8_bit:inst3|q[2] ; ax[1]    ;
+; N/A                                     ; None                                                ; 3.500 ns  ; dx[2] ; reg_8_bit:inst3|q[2] ; ax[2]    ;
+; N/A                                     ; None                                                ; 3.500 ns  ; dx[5] ; reg_8_bit:inst3|q[5] ; ax[1]    ;
+; N/A                                     ; None                                                ; 3.500 ns  ; dx[5] ; reg_8_bit:inst3|q[5] ; ax[2]    ;
+; N/A                                     ; None                                                ; 3.500 ns  ; dx[7] ; reg_8_bit:inst3|q[7] ; ax[0]    ;
+; N/A                                     ; None                                                ; 3.500 ns  ; dx[7] ; reg_8_bit:inst1|q[7] ; ax[1]    ;
+; N/A                                     ; None                                                ; 3.500 ns  ; dx[7] ; reg_8_bit:inst1|q[7] ; ax[2]    ;
+; N/A                                     ; None                                                ; 3.500 ns  ; dx[7] ; reg_8_bit:inst4|q[7] ; c        ;
+; N/A                                     ; None                                                ; 3.400 ns  ; dx[3] ; reg_8_bit:inst3|q[3] ; c        ;
+; N/A                                     ; None                                                ; 3.400 ns  ; dx[6] ; reg_8_bit:inst3|q[6] ; ax[0]    ;
+; N/A                                     ; None                                                ; 3.400 ns  ; dx[6] ; reg_8_bit:inst1|q[6] ; ax[1]    ;
+; N/A                                     ; None                                                ; 3.400 ns  ; dx[6] ; reg_8_bit:inst1|q[6] ; ax[2]    ;
+; N/A                                     ; None                                                ; 3.400 ns  ; dx[7] ; reg_8_bit:inst1|q[7] ; ax[0]    ;
+; N/A                                     ; None                                                ; 3.400 ns  ; dx[7] ; reg_8_bit:inst7|q[7] ; ax[0]    ;
+; N/A                                     ; None                                                ; 3.400 ns  ; dx[7] ; reg_8_bit:inst7|q[7] ; ax[1]    ;
+; N/A                                     ; None                                                ; 3.400 ns  ; dx[7] ; reg_8_bit:inst7|q[7] ; ax[2]    ;
+; N/A                                     ; None                                                ; 3.400 ns  ; dx[7] ; reg_8_bit:inst2|q[7] ; ax[1]    ;
+; N/A                                     ; None                                                ; 3.400 ns  ; dx[7] ; reg_8_bit:inst2|q[7] ; ax[2]    ;
+; N/A                                     ; None                                                ; 3.400 ns  ; dx[7] ; reg_8_bit:inst6|q[7] ; ax[1]    ;
+; N/A                                     ; None                                                ; 3.400 ns  ; dx[7] ; reg_8_bit:inst6|q[7] ; ax[2]    ;
+; N/A                                     ; None                                                ; 3.300 ns  ; dx[0] ; reg_8_bit:inst7|q[0] ; ax[0]    ;
+; N/A                                     ; None                                                ; 3.300 ns  ; dx[0] ; reg_8_bit:inst7|q[0] ; ax[1]    ;
+; N/A                                     ; None                                                ; 3.300 ns  ; dx[0] ; reg_8_bit:inst7|q[0] ; ax[2]    ;
+; N/A                                     ; None                                                ; 3.300 ns  ; dx[0] ; reg_8_bit:inst6|q[0] ; ax[1]    ;
+; N/A                                     ; None                                                ; 3.300 ns  ; dx[0] ; reg_8_bit:inst6|q[0] ; ax[2]    ;
+; N/A                                     ; None                                                ; 3.300 ns  ; dx[1] ; reg_8_bit:inst4|q[1] ; c        ;
+; N/A                                     ; None                                                ; 3.300 ns  ; dx[1] ; reg_8_bit:inst6|q[1] ; ax[1]    ;
+; N/A                                     ; None                                                ; 3.300 ns  ; dx[1] ; reg_8_bit:inst6|q[1] ; ax[2]    ;
+; N/A                                     ; None                                                ; 3.300 ns  ; dx[2] ; reg_8_bit:inst3|q[2] ; ax[0]    ;
+; N/A                                     ; None                                                ; 3.300 ns  ; dx[5] ; reg_8_bit:inst3|q[5] ; ax[0]    ;
+; N/A                                     ; None                                                ; 3.300 ns  ; dx[6] ; reg_8_bit:inst1|q[6] ; ax[0]    ;
+; N/A                                     ; None                                                ; 3.300 ns  ; dx[6] ; reg_8_bit:inst2|q[6] ; ax[1]    ;
+; N/A                                     ; None                                                ; 3.300 ns  ; dx[6] ; reg_8_bit:inst2|q[6] ; ax[2]    ;
+; N/A                                     ; None                                                ; 3.300 ns  ; dx[6] ; reg_8_bit:inst4|q[6] ; c        ;
+; N/A                                     ; None                                                ; 3.300 ns  ; dx[6] ; reg_8_bit:inst6|q[6] ; ax[1]    ;
+; N/A                                     ; None                                                ; 3.300 ns  ; dx[6] ; reg_8_bit:inst6|q[6] ; ax[2]    ;
+; N/A                                     ; None                                                ; 3.300 ns  ; dx[7] ; reg_8_bit:inst2|q[7] ; ax[0]    ;
+; N/A                                     ; None                                                ; 3.300 ns  ; dx[7] ; reg_8_bit:inst6|q[7] ; ax[0]    ;
+; N/A                                     ; None                                                ; 3.200 ns  ; dx[0] ; reg_8_bit:inst6|q[0] ; ax[0]    ;
+; N/A                                     ; None                                                ; 3.200 ns  ; dx[1] ; reg_8_bit:inst7|q[1] ; ax[0]    ;
+; N/A                                     ; None                                                ; 3.200 ns  ; dx[1] ; reg_8_bit:inst7|q[1] ; ax[1]    ;
+; N/A                                     ; None                                                ; 3.200 ns  ; dx[1] ; reg_8_bit:inst7|q[1] ; ax[2]    ;
+; N/A                                     ; None                                                ; 3.200 ns  ; dx[1] ; reg_8_bit:inst6|q[1] ; ax[0]    ;
+; N/A                                     ; None                                                ; 3.200 ns  ; dx[2] ; reg_8_bit:inst2|q[2] ; ax[1]    ;
+; N/A                                     ; None                                                ; 3.200 ns  ; dx[2] ; reg_8_bit:inst2|q[2] ; ax[2]    ;
+; N/A                                     ; None                                                ; 3.200 ns  ; dx[2] ; reg_8_bit:inst6|q[2] ; ax[1]    ;
+; N/A                                     ; None                                                ; 3.200 ns  ; dx[2] ; reg_8_bit:inst6|q[2] ; ax[2]    ;
+; N/A                                     ; None                                                ; 3.200 ns  ; dx[6] ; reg_8_bit:inst2|q[6] ; ax[0]    ;
+; N/A                                     ; None                                                ; 3.200 ns  ; dx[6] ; reg_8_bit:inst6|q[6] ; ax[0]    ;
+; N/A                                     ; None                                                ; 3.100 ns  ; dx[0] ; reg_8_bit:inst1|q[0] ; ax[1]    ;
+; N/A                                     ; None                                                ; 3.100 ns  ; dx[0] ; reg_8_bit:inst1|q[0] ; ax[2]    ;
+; N/A                                     ; None                                                ; 3.100 ns  ; dx[2] ; reg_8_bit:inst2|q[2] ; ax[0]    ;
+; N/A                                     ; None                                                ; 3.100 ns  ; dx[2] ; reg_8_bit:inst6|q[2] ; ax[0]    ;
+; N/A                                     ; None                                                ; 3.100 ns  ; dx[3] ; reg_8_bit:inst4|q[3] ; c        ;
+; N/A                                     ; None                                                ; 3.100 ns  ; dx[4] ; reg_8_bit:inst7|q[4] ; ax[0]    ;
+; N/A                                     ; None                                                ; 3.100 ns  ; dx[4] ; reg_8_bit:inst7|q[4] ; ax[1]    ;
+; N/A                                     ; None                                                ; 3.100 ns  ; dx[4] ; reg_8_bit:inst7|q[4] ; ax[2]    ;
+; N/A                                     ; None                                                ; 3.100 ns  ; dx[5] ; reg_8_bit:inst2|q[5] ; ax[1]    ;
+; N/A                                     ; None                                                ; 3.100 ns  ; dx[5] ; reg_8_bit:inst2|q[5] ; ax[2]    ;
+; N/A                                     ; None                                                ; 3.000 ns  ; dx[0] ; reg_8_bit:inst3|q[0] ; ax[1]    ;
+; N/A                                     ; None                                                ; 3.000 ns  ; dx[0] ; reg_8_bit:inst3|q[0] ; ax[2]    ;
+; N/A                                     ; None                                                ; 3.000 ns  ; dx[0] ; reg_8_bit:inst1|q[0] ; ax[0]    ;
+; N/A                                     ; None                                                ; 3.000 ns  ; dx[3] ; reg_8_bit:inst1|q[3] ; ax[1]    ;
+; N/A                                     ; None                                                ; 3.000 ns  ; dx[3] ; reg_8_bit:inst1|q[3] ; ax[2]    ;
+; N/A                                     ; None                                                ; 3.000 ns  ; dx[5] ; reg_8_bit:inst2|q[5] ; ax[0]    ;
+; N/A                                     ; None                                                ; 2.900 ns  ; dx[0] ; reg_8_bit:inst|q[0]  ; ax[1]    ;
+; N/A                                     ; None                                                ; 2.900 ns  ; dx[0] ; reg_8_bit:inst|q[0]  ; ax[2]    ;
+; N/A                                     ; None                                                ; 2.900 ns  ; dx[1] ; reg_8_bit:inst3|q[1] ; ax[1]    ;
+; N/A                                     ; None                                                ; 2.900 ns  ; dx[1] ; reg_8_bit:inst3|q[1] ; ax[2]    ;
+; N/A                                     ; None                                                ; 2.900 ns  ; dx[2] ; reg_8_bit:inst1|q[2] ; ax[1]    ;
+; N/A                                     ; None                                                ; 2.900 ns  ; dx[2] ; reg_8_bit:inst1|q[2] ; ax[2]    ;
+; N/A                                     ; None                                                ; 2.900 ns  ; dx[3] ; reg_8_bit:inst1|q[3] ; ax[0]    ;
+; N/A                                     ; None                                                ; 2.900 ns  ; dx[3] ; reg_8_bit:inst2|q[3] ; c        ;
+; N/A                                     ; None                                                ; 2.900 ns  ; dx[5] ; reg_8_bit:inst|q[5]  ; c        ;
+; N/A                                     ; None                                                ; 2.800 ns  ; dx[0] ; reg_8_bit:inst3|q[0] ; ax[0]    ;
+; N/A                                     ; None                                                ; 2.800 ns  ; dx[0] ; reg_8_bit:inst|q[0]  ; ax[0]    ;
+; N/A                                     ; None                                                ; 2.800 ns  ; dx[1] ; reg_8_bit:inst2|q[1] ; ax[1]    ;
+; N/A                                     ; None                                                ; 2.800 ns  ; dx[1] ; reg_8_bit:inst2|q[1] ; ax[2]    ;
+; N/A                                     ; None                                                ; 2.800 ns  ; dx[2] ; reg_8_bit:inst1|q[2] ; ax[0]    ;
+; N/A                                     ; None                                                ; 2.800 ns  ; dx[2] ; reg_8_bit:inst|q[2]  ; ax[1]    ;
+; N/A                                     ; None                                                ; 2.800 ns  ; dx[2] ; reg_8_bit:inst|q[2]  ; ax[2]    ;
+; N/A                                     ; None                                                ; 2.800 ns  ; dx[4] ; reg_8_bit:inst|q[4]  ; ax[1]    ;
+; N/A                                     ; None                                                ; 2.800 ns  ; dx[4] ; reg_8_bit:inst|q[4]  ; ax[2]    ;
+; N/A                                     ; None                                                ; 2.800 ns  ; dx[5] ; reg_8_bit:inst1|q[5] ; ax[1]    ;
+; N/A                                     ; None                                                ; 2.800 ns  ; dx[5] ; reg_8_bit:inst1|q[5] ; ax[2]    ;
+; N/A                                     ; None                                                ; 2.700 ns  ; dx[0] ; reg_8_bit:inst2|q[0] ; ax[1]    ;
+; N/A                                     ; None                                                ; 2.700 ns  ; dx[0] ; reg_8_bit:inst2|q[0] ; ax[2]    ;
+; N/A                                     ; None                                                ; 2.700 ns  ; dx[1] ; reg_8_bit:inst3|q[1] ; ax[0]    ;
+; N/A                                     ; None                                                ; 2.700 ns  ; dx[1] ; reg_8_bit:inst2|q[1] ; ax[0]    ;
+; N/A                                     ; None                                                ; 2.700 ns  ; dx[2] ; reg_8_bit:inst|q[2]  ; ax[0]    ;
+; N/A                                     ; None                                                ; 2.700 ns  ; dx[4] ; reg_8_bit:inst|q[4]  ; ax[0]    ;
+; N/A                                     ; None                                                ; 2.700 ns  ; dx[5] ; reg_8_bit:inst1|q[5] ; ax[0]    ;
+; N/A                                     ; None                                                ; 2.700 ns  ; dx[5] ; reg_8_bit:inst7|q[5] ; ax[0]    ;
+; N/A                                     ; None                                                ; 2.700 ns  ; dx[5] ; reg_8_bit:inst7|q[5] ; ax[1]    ;
+; N/A                                     ; None                                                ; 2.700 ns  ; dx[5] ; reg_8_bit:inst7|q[5] ; ax[2]    ;
+; N/A                                     ; None                                                ; 2.700 ns  ; dx[5] ; reg_8_bit:inst6|q[5] ; ax[1]    ;
+; N/A                                     ; None                                                ; 2.700 ns  ; dx[5] ; reg_8_bit:inst6|q[5] ; ax[2]    ;
+; N/A                                     ; None                                                ; 2.600 ns  ; dx[0] ; reg_8_bit:inst2|q[0] ; ax[0]    ;
+; N/A                                     ; None                                                ; 2.600 ns  ; dx[0] ; reg_8_bit:inst4|q[0] ; ax[1]    ;
+; N/A                                     ; None                                                ; 2.600 ns  ; dx[0] ; reg_8_bit:inst4|q[0] ; ax[2]    ;
+; N/A                                     ; None                                                ; 2.600 ns  ; dx[2] ; reg_8_bit:inst4|q[2] ; ax[1]    ;
+; N/A                                     ; None                                                ; 2.600 ns  ; dx[2] ; reg_8_bit:inst4|q[2] ; ax[2]    ;
+; N/A                                     ; None                                                ; 2.600 ns  ; dx[4] ; reg_8_bit:inst3|q[4] ; ax[1]    ;
+; N/A                                     ; None                                                ; 2.600 ns  ; dx[4] ; reg_8_bit:inst3|q[4] ; ax[2]    ;
+; N/A                                     ; None                                                ; 2.600 ns  ; dx[5] ; reg_8_bit:inst6|q[5] ; ax[0]    ;
+; N/A                                     ; None                                                ; 2.500 ns  ; dx[1] ; reg_8_bit:inst1|q[1] ; ax[1]    ;
+; N/A                                     ; None                                                ; 2.500 ns  ; dx[1] ; reg_8_bit:inst1|q[1] ; ax[2]    ;
+; N/A                                     ; None                                                ; 2.500 ns  ; dx[3] ; reg_8_bit:inst7|q[3] ; ax[0]    ;
+; N/A                                     ; None                                                ; 2.500 ns  ; dx[3] ; reg_8_bit:inst7|q[3] ; ax[1]    ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;           ;       ;                      ;          ;
++-----------------------------------------+-----------------------------------------------------+-----------+-------+----------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 8.1 Build 163 10/28/2008 SJ Web Edition
+    Info: Processing started: Mon Oct 21 00:03:02 2019
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off block_ron -c block_ron
+Info: Started post-fitting delay annotation
+Info: Delay annotation completed successfully
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "c" is an undefined clock
+    Info: Assuming node "ax[0]" is an undefined clock
+    Info: Assuming node "ax[1]" is an undefined clock
+    Info: Assuming node "ax[2]" is an undefined clock
+Warning: Found 8 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected gated clock "d_mux:inst8|Equal0~52" as buffer
+    Info: Detected gated clock "d_mux:inst8|Equal0~51" as buffer
+    Info: Detected gated clock "d_mux:inst8|Equal0~50" as buffer
+    Info: Detected gated clock "d_mux:inst8|Equal0~49" as buffer
+    Info: Detected gated clock "d_mux:inst8|Equal0~48" as buffer
+    Info: Detected gated clock "d_mux:inst8|Equal0~47" as buffer
+    Info: Detected gated clock "d_mux:inst8|Equal0~46" as buffer
+    Info: Detected gated clock "d_mux:inst8|Equal0~45" as buffer
+Info: No valid register-to-register data paths exist for clock "c"
+Info: No valid register-to-register data paths exist for clock "ax[0]"
+Info: No valid register-to-register data paths exist for clock "ax[1]"
+Info: No valid register-to-register data paths exist for clock "ax[2]"
+Info: tsu for register "reg_8_bit:inst2|q[3]" (data pin = "dx[3]", clock pin = "ax[0]") is 1.700 ns
+    Info: + Longest pin to register delay is 7.000 ns
+        Info: 1: + IC(0.000 ns) + CELL(3.100 ns) = 3.100 ns; Loc. = PIN_67; Fanout = 8; PIN Node = 'dx[3]'
+        Info: 2: + IC(3.000 ns) + CELL(0.900 ns) = 7.000 ns; Loc. = LC6_B21; Fanout = 2; REG Node = 'reg_8_bit:inst2|q[3]'
+        Info: Total cell delay = 4.000 ns ( 57.14 % )
+        Info: Total interconnect delay = 3.000 ns ( 42.86 % )
+    Info: + Micro setup delay of destination is 1.300 ns
+    Info: - Shortest clock path from clock "ax[0]" to destination register is 6.600 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.900 ns) = 1.900 ns; Loc. = PIN_43; Fanout = 16; CLK Node = 'ax[0]'
+        Info: 2: + IC(2.200 ns) + CELL(1.900 ns) = 6.000 ns; Loc. = LC4_B21; Fanout = 8; COMB Node = 'd_mux:inst8|Equal0~49'
+        Info: 3: + IC(0.600 ns) + CELL(0.000 ns) = 6.600 ns; Loc. = LC6_B21; Fanout = 2; REG Node = 'reg_8_bit:inst2|q[3]'
+        Info: Total cell delay = 3.800 ns ( 57.58 % )
+        Info: Total interconnect delay = 2.800 ns ( 42.42 % )
+Info: tco from clock "c" to destination pin "x[0]" through register "reg_8_bit:inst1|q[0]" is 28.100 ns
+    Info: + Longest clock path from clock "c" to source register is 10.500 ns
+        Info: 1: + IC(0.000 ns) + CELL(3.100 ns) = 3.100 ns; Loc. = PIN_83; Fanout = 8; CLK Node = 'c'
+        Info: 2: + IC(3.400 ns) + CELL(1.400 ns) = 7.900 ns; Loc. = LC2_B21; Fanout = 8; COMB Node = 'd_mux:inst8|Equal0~47'
+        Info: 3: + IC(2.600 ns) + CELL(0.000 ns) = 10.500 ns; Loc. = LC2_B15; Fanout = 2; REG Node = 'reg_8_bit:inst1|q[0]'
+        Info: Total cell delay = 4.500 ns ( 42.86 % )
+        Info: Total interconnect delay = 6.000 ns ( 57.14 % )
+    Info: + Micro clock to output delay of source is 0.900 ns
+    Info: + Longest register to pin delay is 16.700 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC2_B15; Fanout = 2; REG Node = 'reg_8_bit:inst1|q[0]'
+        Info: 2: + IC(3.200 ns) + CELL(1.400 ns) = 4.600 ns; Loc. = LC1_A22; Fanout = 1; COMB Node = 'mux_bus:inst9|q[0]~195'
+        Info: 3: + IC(2.500 ns) + CELL(1.900 ns) = 9.000 ns; Loc. = LC5_A13; Fanout = 1; COMB Node = 'mux_bus:inst9|q[0]~196'
+        Info: 4: + IC(0.600 ns) + CELL(1.900 ns) = 11.500 ns; Loc. = LC4_A13; Fanout = 1; COMB Node = 'mux_bus:inst9|q[0]~199'
+        Info: 5: + IC(1.300 ns) + CELL(3.900 ns) = 16.700 ns; Loc. = PIN_71; Fanout = 0; PIN Node = 'x[0]'
+        Info: Total cell delay = 9.100 ns ( 54.49 % )
+        Info: Total interconnect delay = 7.600 ns ( 45.51 % )
+Info: Longest tpd from source pin "ax[1]" to destination pin "x[3]" is 19.000 ns
+    Info: 1: + IC(0.000 ns) + CELL(1.900 ns) = 1.900 ns; Loc. = PIN_44; Fanout = 32; CLK Node = 'ax[1]'
+    Info: 2: + IC(2.700 ns) + CELL(1.900 ns) = 6.500 ns; Loc. = LC1_B13; Fanout = 1; COMB Node = 'mux_bus:inst9|q[3]~182'
+    Info: 3: + IC(1.800 ns) + CELL(1.900 ns) = 10.200 ns; Loc. = LC5_B16; Fanout = 1; COMB Node = 'mux_bus:inst9|q[3]~183'
+    Info: 4: + IC(1.800 ns) + CELL(1.900 ns) = 13.900 ns; Loc. = LC5_B19; Fanout = 1; COMB Node = 'mux_bus:inst9|q[3]~184'
+    Info: 5: + IC(1.200 ns) + CELL(3.900 ns) = 19.000 ns; Loc. = PIN_65; Fanout = 0; PIN Node = 'x[3]'
+    Info: Total cell delay = 11.500 ns ( 60.53 % )
+    Info: Total interconnect delay = 7.500 ns ( 39.47 % )
+Info: th for register "reg_8_bit:inst5|q[5]" (data pin = "dx[5]", clock pin = "c") is 7.400 ns
+    Info: + Longest clock path from clock "c" to destination register is 12.700 ns
+        Info: 1: + IC(0.000 ns) + CELL(3.100 ns) = 3.100 ns; Loc. = PIN_83; Fanout = 8; CLK Node = 'c'
+        Info: 2: + IC(3.400 ns) + CELL(1.400 ns) = 7.900 ns; Loc. = LC1_B21; Fanout = 8; COMB Node = 'd_mux:inst8|Equal0~45'
+        Info: 3: + IC(4.800 ns) + CELL(0.000 ns) = 12.700 ns; Loc. = LC3_B24; Fanout = 2; REG Node = 'reg_8_bit:inst5|q[5]'
+        Info: Total cell delay = 4.500 ns ( 35.43 % )
+        Info: Total interconnect delay = 8.200 ns ( 64.57 % )
+    Info: + Micro hold delay of destination is 1.400 ns
+    Info: - Shortest pin to register delay is 6.700 ns
+        Info: 1: + IC(0.000 ns) + CELL(3.100 ns) = 3.100 ns; Loc. = PIN_64; Fanout = 8; PIN Node = 'dx[5]'
+        Info: 2: + IC(2.700 ns) + CELL(0.900 ns) = 6.700 ns; Loc. = LC3_B24; Fanout = 2; REG Node = 'reg_8_bit:inst5|q[5]'
+        Info: Total cell delay = 4.000 ns ( 59.70 % )
+        Info: Total interconnect delay = 2.700 ns ( 40.30 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 185 megabytes
+    Info: Processing ended: Mon Oct 21 00:03:03 2019
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+

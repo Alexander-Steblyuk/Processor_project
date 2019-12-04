@@ -1,0 +1,161 @@
+Version 8.1 Build 163 10/28/2008 SJ Web Edition
+18
+2996
+OFF
+OFF
+OFF
+OFF
+ON
+ON
+OFF
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Partition --
+-- End Partition --
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+block_ron
+# storage
+db|block_ron.(0).cnf
+db|block_ron.(0).cnf
+# case_insensitive
+# source_file
+block_ron.bdf
+387d4da337cc9dc2b2df336226bfeeb
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+mux_bus
+# storage
+db|block_ron.(1).cnf
+db|block_ron.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+..|mux_bus|mux_bus.v
+7777953a8cc9e3129964491cacb6a2c1
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+mux_bus:inst9
+mux_bus:inst10
+}
+# macro_sequence
+
+# end
+# entity
+reg_8_bit
+# storage
+db|block_ron.(2).cnf
+db|block_ron.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+..|reg_8_bit|reg_8_bit.v
+f666402d82442acf1cad34255332786b
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+reg_8_bit:inst
+reg_8_bit:inst1
+reg_8_bit:inst2
+reg_8_bit:inst3
+reg_8_bit:inst4
+reg_8_bit:inst5
+reg_8_bit:inst6
+reg_8_bit:inst7
+}
+# macro_sequence
+
+# end
+# entity
+d_mux
+# storage
+db|block_ron.(3).cnf
+db|block_ron.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+..|d_mux|d_mux.v
+682bdfbf3dacbd2a4cbfe52c4eddbfb
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+d_mux:inst8
+}
+# macro_sequence
+
+# end
+# complete
+
